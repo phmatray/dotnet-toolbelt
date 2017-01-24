@@ -1,16 +1,14 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Package</id>
-    <version>1.0.1</version>
+    <id>SimpleHelpers</id>
+    <version>1.0.2</version>
     <authors>Philippe Matray</authors>
-    <owners>phmat</owners>
+    <owners>Philippe Matray</owners>
+    <iconUrl>http://icon-icons.com/icons2/390/PNG/512/banana_38544.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Simple Helpers for your .NET applications</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2017</copyright>
-    <tags>Tag1 Tag2</tags>
-    <dependencies>
-    </dependencies>
+    <tags>Helpers Utilities</tags>
   </metadata>
 </package>
