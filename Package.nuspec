@@ -13,6 +13,5 @@
   </metadata>
   <files>
     <file src="SimpleHelpers\bin\Release\SimpleHelpers.dll" target="lib" />
-    <file src="SimpleHelpers\bin\Release\SimpleHelpers.pdb" target="lib" />
   </files>
 </package>
