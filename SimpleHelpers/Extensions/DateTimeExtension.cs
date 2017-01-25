@@ -2,7 +2,7 @@
  * Philippe Matray
  * 
  * Date : 
- * 2014-09-22
+ * 2014-09-22, 2017-01-25
  */
 
 using System;
@@ -17,11 +17,7 @@ namespace SimpleHelpers.Extensions
         /// <param name="date">The date.</param>
         /// <returns></returns>
         public static bool IsMonday(this DateTime date)
-        {
-            DayOfWeek dayOfWeek = date.DayOfWeek;
-            bool isMonday = dayOfWeek == DayOfWeek.Monday;
-            return isMonday;
-        }
+            => date.DayOfWeek == DayOfWeek.Monday;
 
         /// <summary>
         ///     Determines whether the specified date is tuesday.
@@ -29,11 +25,7 @@ namespace SimpleHelpers.Extensions
         /// <param name="date">The date.</param>
         /// <returns></returns>
         public static bool IsTuesday(this DateTime date)
-        {
-            DayOfWeek dayOfWeek = date.DayOfWeek;
-            bool isTuesday = dayOfWeek == DayOfWeek.Tuesday;
-            return isTuesday;
-        }
+            => date.DayOfWeek == DayOfWeek.Tuesday;
 
         /// <summary>
         ///     Determines whether the specified date is wednesday.
@@ -41,11 +33,7 @@ namespace SimpleHelpers.Extensions
         /// <param name="date">The date.</param>
         /// <returns></returns>
         public static bool IsWednesday(this DateTime date)
-        {
-            DayOfWeek dayOfWeek = date.DayOfWeek;
-            bool isWednesday = dayOfWeek == DayOfWeek.Wednesday;
-            return isWednesday;
-        }
+            => date.DayOfWeek == DayOfWeek.Wednesday;
 
         /// <summary>
         ///     Determines whether the specified date is thursday.
@@ -53,11 +41,7 @@ namespace SimpleHelpers.Extensions
         /// <param name="date">The date.</param>
         /// <returns></returns>
         public static bool IsThursday(this DateTime date)
-        {
-            DayOfWeek dayOfWeek = date.DayOfWeek;
-            bool isThursday = dayOfWeek == DayOfWeek.Thursday;
-            return isThursday;
-        }
+            => date.DayOfWeek == DayOfWeek.Thursday;
 
         /// <summary>
         ///     Determines whether the specified date is friday.
@@ -65,11 +49,7 @@ namespace SimpleHelpers.Extensions
         /// <param name="date">The date.</param>
         /// <returns></returns>
         public static bool IsFriday(this DateTime date)
-        {
-            DayOfWeek dayOfWeek = date.DayOfWeek;
-            bool isFriday = dayOfWeek == DayOfWeek.Friday;
-            return isFriday;
-        }
+            => date.DayOfWeek == DayOfWeek.Friday;
 
         /// <summary>
         ///     Determines whether the specified date is saturday.
@@ -77,11 +57,7 @@ namespace SimpleHelpers.Extensions
         /// <param name="date">The date.</param>
         /// <returns></returns>
         public static bool IsSaturday(this DateTime date)
-        {
-            DayOfWeek dayOfWeek = date.DayOfWeek;
-            bool isSaturday = dayOfWeek == DayOfWeek.Saturday;
-            return isSaturday;
-        }
+            => date.DayOfWeek == DayOfWeek.Saturday;
 
         /// <summary>
         ///     Determines whether the specified date is sunday.
@@ -89,11 +65,7 @@ namespace SimpleHelpers.Extensions
         /// <param name="date">The date.</param>
         /// <returns></returns>
         public static bool IsSunday(this DateTime date)
-        {
-            DayOfWeek dayOfWeek = date.DayOfWeek;
-            bool isSunday = dayOfWeek == DayOfWeek.Sunday;
-            return isSunday;
-        }
+            => date.DayOfWeek == DayOfWeek.Sunday;
 
         /// <summary>
         ///     Determines whether the specified date is in the weekend.
@@ -101,42 +73,54 @@ namespace SimpleHelpers.Extensions
         /// <param name="date">The date.</param>
         /// <returns></returns>
         public static bool IsWeekend(this DateTime date)
-        {
-            bool isWeekend = date.IsSaturday() || date.IsSunday();
-            return isWeekend;
-        }
+            => date.IsSaturday() || date.IsSunday();
 
         /// <summary>
-        ///     Determines whether the specified date is a week day.
+        ///     Determines whether the specified date is a working day of the week.
         /// </summary>
         /// <param name="date">The date.</param>
         /// <returns></returns>
-        public static bool IsWeek(this DateTime date)
-        {
-            bool isWeek = !date.IsWeekend();
-            return isWeek;
-        }
+        public static bool IsWorkingWeek(this DateTime date)
+            => !date.IsWeekend();
 
         /// <summary>
-        ///     Gets the first day of month.
+        ///     Gets the first day of the month.
         /// </summary>
         /// <param name="date">The date.</param>
         /// <returns></returns>
-        public static DateTime GetFirstDayOfMonth(this DateTime date)
-        {
-            var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
-            return firstDayOfMonth;
-        }
+        public static DateTime FirstOfMonth(this DateTime date)
+            => new DateTime(date.Year, date.Month, 1);
 
         /// <summary>
-        ///     Gets the last day of month.
+        ///     Gets the last day of the month.
         /// </summary>
         /// <param name="date">The date.</param>
         /// <returns></returns>
-        public static DateTime GetLastDayOfMonth(this DateTime date)
-        {
-            DateTime lastDayOfMonth = new DateTime(date.Year, date.Month + 1, 1).AddDays(-1);
-            return lastDayOfMonth;
-        }
+        public static DateTime LastOfMonth(this DateTime date)
+            => new DateTime(date.Year, date.Month + 1, 1).AddDays(-1);
+
+        /// <summary>
+        ///     Gets the last day of the year.
+        /// </summary>
+        /// <param name="date">The date.</param>
+        /// <returns></returns>
+        public static DateTime LastOfYear(this DateTime date)
+            => new DateTime(date.Year, 12, 31);
+
+        /// <summary>
+        ///     Gets the first day ot the working week (Monday).
+        /// </summary>
+        /// <param name="date">The date.</param>
+        /// <returns></returns>
+        public static DateTime FirstOfWorkingWeek(this DateTime date)
+            => date.AddDays(DayOfWeek.Monday - date.DayOfWeek);
+
+        /// <summary>
+        ///     Gets the last day ot the working week (Friday).
+        /// </summary>
+        /// <param name="date">The date.</param>
+        /// <returns></returns>
+        public static DateTime LastOfWorkingWeek(this DateTime date)
+            => date.AddDays(DayOfWeek.Friday - date.DayOfWeek);
     }
 }
