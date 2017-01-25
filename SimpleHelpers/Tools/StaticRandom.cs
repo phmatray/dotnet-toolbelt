@@ -42,9 +42,7 @@ namespace SimpleHelpers.Tools
         ///     The instance.
         /// </value>
         public static Random Instance
-        {
-            get { return ThreadLocal.Value; }
-        }
+            => ThreadLocal.Value;
 
         #endregion
     }

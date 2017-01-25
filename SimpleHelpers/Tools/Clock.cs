@@ -29,9 +29,7 @@ namespace SimpleHelpers.Tools
         #region Properties
 
         public static DateTime Now
-        {
-            get { return _function(); }
-        }
+            => _function();
 
         public static Func<DateTime> FunctionNow
         {

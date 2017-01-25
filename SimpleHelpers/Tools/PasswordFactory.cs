@@ -18,7 +18,7 @@ namespace SimpleHelpers.Tools
         private readonly int _passwordLength;
         private readonly Random _rnd;
 
-        public Regex Pattern { get; private set; }
+        public Regex Pattern { get; }
 
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace SimpleHelpers.Tools
         public PasswordFactory(int passwordLength = 8)
         {
             if (passwordLength < 4)
-                throw new ArgumentOutOfRangeException("passwordLength", "cannot be smaller than 4");
+                throw new ArgumentOutOfRangeException(nameof(passwordLength), "cannot be smaller than 4");
 
             _passwordLength = passwordLength;
             _rnd = new Random();
@@ -108,8 +108,7 @@ namespace SimpleHelpers.Tools
             }
 
             if (password.Length < 8)
-                retval.Add(new ArgumentException(
-                    string.Format("Your password must be at least {0} characters.", _passwordLength)));
+                retval.Add(new ArgumentException($"Your password must be at least {_passwordLength} characters."));
 
             var patternUppers = new Regex(@"^(?=.*[A-Z]).*$");
             if (!patternUppers.IsMatch(password))

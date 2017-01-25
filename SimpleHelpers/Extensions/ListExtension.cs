@@ -23,7 +23,7 @@ namespace SimpleHelpers.Extensions
         public static ObservableCollection<T> ToObservableCollection<T>(this IEnumerable<T> source)
         {
             if (source == null)
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
 
             var retval = new ObservableCollection<T>();
             foreach (T item in source)
@@ -42,7 +42,7 @@ namespace SimpleHelpers.Extensions
         public static Dictionary<T, int> ToDictionaryCount<T>(this IEnumerable<T> source)
         {
             if (source == null)
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
 
             Dictionary<T, int> result = source.GroupBy(arg => arg)
                 .ToDictionary(g => g.Key, g => g.Count());

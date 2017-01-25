@@ -56,7 +56,7 @@ namespace SimpleHelpers.Helpers
                 case RegexTypeEnum.Numeric:
                     return MatchIfIsNumeric(value);
                 default:
-                    throw new ArgumentOutOfRangeException("regexType");
+                    throw new ArgumentOutOfRangeException(nameof(regexType));
             }
         }
 

@@ -64,9 +64,9 @@ namespace SimpleHelpers.Extensions
         public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> source, Random randomGenerator)
         {
             if (source == null)
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             if (randomGenerator == null)
-                throw new ArgumentNullException("randomGenerator");
+                throw new ArgumentNullException(nameof(randomGenerator));
 
             return source.ShuffleIterator(randomGenerator);
         }
@@ -107,9 +107,9 @@ namespace SimpleHelpers.Extensions
         public static List<T> ShiftLeft<T>(this IEnumerable<T> source, int iteration = 1)
         {
             if (source == null)
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             if (iteration < 0)
-                throw new ArgumentOutOfRangeException("iteration");
+                throw new ArgumentOutOfRangeException(nameof(iteration));
 
             var result = new List<T>(source);
             for (var i = 0; i < iteration; i++)
@@ -134,9 +134,9 @@ namespace SimpleHelpers.Extensions
         public static List<T> ShiftRight<T>(this IEnumerable<T> source, int iteration = 1)
         {
             if (source == null)
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             if (iteration < 0)
-                throw new ArgumentOutOfRangeException("iteration");
+                throw new ArgumentOutOfRangeException(nameof(iteration));
 
             var result = new List<T>(source);
             for (var i = 0; i < iteration; i++)

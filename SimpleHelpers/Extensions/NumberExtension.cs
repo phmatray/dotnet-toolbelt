@@ -62,7 +62,7 @@ namespace SimpleHelpers.Extensions
         public static string ToRoman(this int number)
         {
             if ((number < 0) || (number > 3999))
-                throw new ArgumentOutOfRangeException("number", number, "insert value betwheen 1 and 3999");
+                throw new ArgumentOutOfRangeException(nameof(number), number, "insert value betwheen 1 and 3999");
 
             if (number < 1) return String.Empty;
             if (number >= 1000) return "M" + ToRoman(number - 1000);
@@ -79,7 +79,7 @@ namespace SimpleHelpers.Extensions
             if (number >= 4) return "IV" + ToRoman(number - 4);
             if (number >= 1) return "I" + ToRoman(number - 1);
 
-            throw new ArgumentOutOfRangeException("number", number, "something bad happened");
+            throw new ArgumentOutOfRangeException(nameof(number), number, "something bad happened");
         }
     }
 }

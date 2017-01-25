@@ -7,7 +7,7 @@
 
 using System;
 
-namespace SimpleHelpers.Tools
+namespace SimpleHelpers.Patterns.Singleton
 {
     /// <summary>
     ///     A base class for the singleton design pattern.
@@ -31,9 +31,7 @@ namespace SimpleHelpers.Tools
         ///     Gets the instance of this singleton.
         /// </summary>
         public static T Instance
-        {
-            get { return StaticInstance.Value; }
-        }
+            => StaticInstance.Value;
 
         #endregion
 

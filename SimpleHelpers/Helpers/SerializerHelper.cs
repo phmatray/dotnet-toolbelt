@@ -20,7 +20,7 @@ namespace SimpleHelpers.Helpers
         public static string SerializeToString(this object obj)
         {
             if (obj == null)
-                throw new ArgumentNullException("obj");
+                throw new ArgumentNullException(nameof(obj));
 
             var serializer = new XmlSerializer(obj.GetType());
             using (var writer = new StringWriter())
@@ -40,7 +40,7 @@ namespace SimpleHelpers.Helpers
         public static T DeserializeFromString<T>(this string xmlText)
         {
             if (string.IsNullOrWhiteSpace(xmlText))
-                throw new ArgumentNullException("xmlText");
+                throw new ArgumentNullException(nameof(xmlText));
 
             var deserializer = new XmlSerializer(typeof(T));
             using (var reader = new StringReader(xmlText))

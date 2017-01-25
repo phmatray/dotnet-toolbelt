@@ -36,7 +36,7 @@ namespace SimpleHelpers.Extensions
         public static bool ContainsAny(this string text, string characters)
         {
             if (string.IsNullOrWhiteSpace(characters))
-                throw new ArgumentNullException("characters");
+                throw new ArgumentNullException(nameof(characters));
 
             return text.ContainsAny(characters.ToCharArray());
         }
@@ -52,9 +52,9 @@ namespace SimpleHelpers.Extensions
         public static bool ContainsAny(this string text, params char[] characters)
         {
             if (characters == null)
-                throw new ArgumentNullException("characters");
+                throw new ArgumentNullException(nameof(characters));
             if (characters.Count() <= 0)
-                throw new ArgumentOutOfRangeException("characters");
+                throw new ArgumentOutOfRangeException(nameof(characters));
 
             return text.IndexOfAny(characters) != -1;
         }
@@ -69,7 +69,7 @@ namespace SimpleHelpers.Extensions
         public static string RemoveAny(this string text, string characters)
         {
             if (string.IsNullOrWhiteSpace(characters))
-                throw new ArgumentNullException("characters");
+                throw new ArgumentNullException(nameof(characters));
 
             return text.RemoveAny(characters.ToCharArray());
         }
@@ -85,9 +85,9 @@ namespace SimpleHelpers.Extensions
         public static string RemoveAny(this string text, params char[] characters)
         {
             if (characters == null)
-                throw new ArgumentNullException("characters");
+                throw new ArgumentNullException(nameof(characters));
             if (characters.Count() <= 0)
-                throw new ArgumentOutOfRangeException("characters");
+                throw new ArgumentOutOfRangeException(nameof(characters));
 
             var sb = new StringBuilder(text);
             foreach (char character in characters)

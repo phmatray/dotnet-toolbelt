@@ -44,7 +44,7 @@ namespace SimpleHelpers.Tools
         {
             IsNumber = IsDouble(number);
             if (!IsNumber)
-                throw new Exception(string.Format("The format is not valid: '{0}'", number));
+                throw new Exception($"The format is not valid: '{number}'");
 
             string copy = number;
             CultureInfo invariantCulture = CultureInfo.InvariantCulture;
@@ -113,7 +113,7 @@ namespace SimpleHelpers.Tools
         private bool IsDouble(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
 
             var doublePattern = new Regex(@"^[-+]?([0-9]*[ \.,]?)+[\.,]?[0-9]+([eE][-+]?[0-9]+)?$");
             bool isMatch = doublePattern.IsMatch(input);
@@ -123,7 +123,7 @@ namespace SimpleHelpers.Tools
         private bool ContainsScientificPart(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
 
             var scientificPartPattern = new Regex(@"[Ee][+-]?[0-9]+$");
             bool isMatch = scientificPartPattern.IsMatch(input);
@@ -133,7 +133,7 @@ namespace SimpleHelpers.Tools
         private bool ContainsLeadingSign(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
 
             var leadingSignPattern = new Regex(@"^[+-]");
             bool isMatch = leadingSignPattern.IsMatch(input);
@@ -143,7 +143,7 @@ namespace SimpleHelpers.Tools
         private bool ContainsNoIntegerPart(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
 
             var noIntegerPartPattern = new Regex(@"^[,.][0-9]+");
             bool isMatch = noIntegerPartPattern.IsMatch(input);
@@ -152,8 +152,8 @@ namespace SimpleHelpers.Tools
 
         public override string ToString()
         {
-            return string.Format("IsNumber: {0}, DecimalSeparator: {1}, GroupSeparator: {2}, Result: {3}",
-                IsNumber, DecimalSeparator, GroupSeparator, Result);
+            return
+                $"IsNumber: {IsNumber}, DecimalSeparator: {DecimalSeparator}, GroupSeparator: {GroupSeparator}, Result: {Result}";
         }
 
         #endregion

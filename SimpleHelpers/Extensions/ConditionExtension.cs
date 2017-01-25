@@ -15,7 +15,7 @@ namespace SimpleHelpers.Extensions
         public static bool EqualsAnyOf<T>(this T source, params T[] list)
         {
             if (source.Equals(null))
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
 
             return list.Contains(source);
         }

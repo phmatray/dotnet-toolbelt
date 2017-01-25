@@ -23,7 +23,7 @@ namespace SimpleHelpers.Tools
         public static TimeSpan PickMilliseconds(int minValue = 0, int maxValue = 1000)
         {
             if (minValue >= maxValue)
-                throw new ArgumentOutOfRangeException("minValue", "minValue is greater than maxValue.");
+                throw new ArgumentOutOfRangeException(nameof(minValue), "minValue is greater than maxValue.");
 
             return TimeSpan.FromMilliseconds(StaticRandom.Instance.Next(minValue, ++maxValue));
         }
@@ -38,7 +38,7 @@ namespace SimpleHelpers.Tools
         public static TimeSpan PickSeconds(int minValue = 0, int maxValue = 60)
         {
             if (minValue >= maxValue)
-                throw new ArgumentOutOfRangeException("minValue", "minValue is greater than maxValue.");
+                throw new ArgumentOutOfRangeException(nameof(minValue), "minValue is greater than maxValue.");
 
             return TimeSpan.FromSeconds(StaticRandom.Instance.Next(minValue, ++maxValue));
         }
@@ -53,7 +53,7 @@ namespace SimpleHelpers.Tools
         public static TimeSpan PickMinutes(int minValue = 0, int maxValue = 60)
         {
             if (minValue >= maxValue)
-                throw new ArgumentOutOfRangeException("minValue", "minValue is greater than maxValue.");
+                throw new ArgumentOutOfRangeException(nameof(minValue), "minValue is greater than maxValue.");
 
             return TimeSpan.FromMinutes(StaticRandom.Instance.Next(minValue, ++maxValue));
         }
@@ -68,7 +68,7 @@ namespace SimpleHelpers.Tools
         public static TimeSpan PickHours(int minValue = 0, int maxValue = 24)
         {
             if (minValue >= maxValue)
-                throw new ArgumentOutOfRangeException("minValue", "minValue is greater than maxValue.");
+                throw new ArgumentOutOfRangeException(nameof(minValue), "minValue is greater than maxValue.");
 
             return TimeSpan.FromHours(StaticRandom.Instance.Next(minValue, ++maxValue));
         }
@@ -83,7 +83,7 @@ namespace SimpleHelpers.Tools
         public static TimeSpan PickDays(int minValue = 0, int maxValue = 365)
         {
             if (minValue >= maxValue)
-                throw new ArgumentOutOfRangeException("minValue", "minValue is greater than maxValue.");
+                throw new ArgumentOutOfRangeException(nameof(minValue), "minValue is greater than maxValue.");
 
             return TimeSpan.FromDays(StaticRandom.Instance.Next(minValue, ++maxValue));
         }
@@ -101,7 +101,7 @@ namespace SimpleHelpers.Tools
             var maxValue = (int)maxDay;
 
             if (minValue >= maxValue)
-                throw new ArgumentOutOfRangeException("minDay", "minDay is after than maxDay.");
+                throw new ArgumentOutOfRangeException(nameof(minDay), "minDay is after than maxDay.");
 
             return (DayOfWeek)StaticRandom.Instance.Next(minValue, ++maxValue);
         }

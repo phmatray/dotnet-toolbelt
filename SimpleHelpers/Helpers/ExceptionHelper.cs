@@ -29,10 +29,7 @@ namespace SimpleHelpers.Helpers
             where T : class
         {
             if (value == null)
-            {
-                throw new ArgumentNullException(
-                    paramName + " not allowed to be null");
-            }
+                throw new ArgumentNullException($"{paramName} not allowed to be null");
         }
 
         /// <summary>
@@ -44,10 +41,7 @@ namespace SimpleHelpers.Helpers
         public static void ThrowIfArgumentIsNullOrEmpty(this string value, string paramName = "this parameter")
         {
             if (string.IsNullOrEmpty(value))
-            {
-                throw new ArgumentNullException(
-                    paramName + " not allowed to be null or empty");
-            }
+                throw new ArgumentNullException($"{paramName} not allowed to be null or empty");
         }
 
         /// <summary>
@@ -61,7 +55,7 @@ namespace SimpleHelpers.Helpers
             if (string.IsNullOrWhiteSpace(value))
             {
                 throw new ArgumentNullException(
-                    paramName + " not allowed to be null, empty or consists exclusively of white-space characters.");
+                    $"{paramName} not allowed to be null, empty or consists exclusively of white-space characters.");
             }
         }
 
@@ -76,16 +70,10 @@ namespace SimpleHelpers.Helpers
             string paramName = "this parameter")
         {
             if (collection == null)
-            {
-                throw new ArgumentNullException(
-                    paramName + " not allowed to be null");
-            }
+                throw new ArgumentNullException($"{paramName} not allowed to be null");
 
             if (!collection.Any())
-            {
-                throw new ArgumentNullException(
-                    paramName + " not allowed to be empty.");
-            }
+                throw new ArgumentNullException($"{paramName} not allowed to be empty.");
         }
 
         /// <summary>

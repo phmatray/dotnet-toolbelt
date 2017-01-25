@@ -11,44 +11,31 @@ namespace SimpleHelpers.Types
 {
     public class MyString : IEquatable<MyString>, IConvertible
     {
-        private string _value;
-
         public MyString()
         {
         }
 
         public MyString(string value)
         {
-            _value = value;
+            Value = value;
         }
 
-        public string Value
-        {
-            get { return _value; }
-            set { _value = value; }
-        }
+        public string Value { get; set; }
 
         public bool Equals(MyString other)
         {
             if (ReferenceEquals(null, other)) return false;
-            return ReferenceEquals(this, other) || Equals(other._value, _value);
+            return ReferenceEquals(this, other) || Equals(other.Value, Value);
         }
 
         public override string ToString()
-        {
-            return _value;
-        }
+            => Value;
 
-        public static implicit operator MyString(string str)
-        {
-            return new MyString(str);
-        }
-
-
+        public static implicit operator MyString(string str) 
+            => new MyString(str);
+        
         public static implicit operator string(MyString dictionary)
-        {
-            return dictionary._value;
-        }
+            => dictionary.Value;
 
         public override bool Equals(object obj)
         {
@@ -59,106 +46,66 @@ namespace SimpleHelpers.Types
         }
 
         public override int GetHashCode()
-        {
-            return (_value != null ? _value.GetHashCode() : 0);
-        }
+            => Value?.GetHashCode() ?? 0;
 
         public static bool operator ==(MyString left, MyString right)
-        {
-            return Equals(left, right);
-        }
+            => Equals(left, right);
 
         public static bool operator !=(MyString left, MyString right)
-        {
-            return !Equals(left, right);
-        }
+            => !Equals(left, right);
 
         #region IConvertible Members
 
         public TypeCode GetTypeCode()
-        {
-            return TypeCode.String;
-        }
+            => TypeCode.String;
 
         public bool ToBoolean(IFormatProvider provider)
-        {
-            return Convert.ToBoolean(_value, provider);
-        }
+            => Convert.ToBoolean(Value, provider);
 
         public byte ToByte(IFormatProvider provider)
-        {
-            return Convert.ToByte(_value, provider);
-        }
+            => Convert.ToByte(Value, provider);
 
         public char ToChar(IFormatProvider provider)
-        {
-            return Convert.ToChar(_value, provider);
-        }
+            => Convert.ToChar(Value, provider);
 
         public DateTime ToDateTime(IFormatProvider provider)
-        {
-            return Convert.ToDateTime(_value, provider);
-        }
+            => Convert.ToDateTime(Value, provider);
 
         public decimal ToDecimal(IFormatProvider provider)
-        {
-            return Convert.ToDecimal(_value, provider);
-        }
+            => Convert.ToDecimal(Value, provider);
 
         public double ToDouble(IFormatProvider provider)
-        {
-            return Convert.ToDouble(_value, provider);
-        }
+            => Convert.ToDouble(Value, provider);
 
         public short ToInt16(IFormatProvider provider)
-        {
-            return Convert.ToInt16(_value, provider);
-        }
+            => Convert.ToInt16(Value, provider);
 
         public int ToInt32(IFormatProvider provider)
-        {
-            return Convert.ToInt32(_value, provider);
-        }
+            => Convert.ToInt32(Value, provider);
 
         public long ToInt64(IFormatProvider provider)
-        {
-            return Convert.ToInt64(_value, provider);
-        }
+            => Convert.ToInt64(Value, provider);
 
         public sbyte ToSByte(IFormatProvider provider)
-        {
-            return Convert.ToSByte(_value, provider);
-        }
+            => Convert.ToSByte(Value, provider);
 
         public float ToSingle(IFormatProvider provider)
-        {
-            return Convert.ToSingle(_value, provider);
-        }
+            => Convert.ToSingle(Value, provider);
 
         public string ToString(IFormatProvider provider)
-        {
-            return _value;
-        }
+            => Value;
 
         public object ToType(Type conversionType, IFormatProvider provider)
-        {
-            return Convert.ChangeType(_value, conversionType, provider);
-        }
+            => Convert.ChangeType(Value, conversionType, provider);
 
         public ushort ToUInt16(IFormatProvider provider)
-        {
-            return Convert.ToUInt16(_value, provider);
-        }
+            => Convert.ToUInt16(Value, provider);
 
         public uint ToUInt32(IFormatProvider provider)
-        {
-            return Convert.ToUInt32(_value, provider);
-        }
+            => Convert.ToUInt32(Value, provider);
 
         public ulong ToUInt64(IFormatProvider provider)
-        {
-            return Convert.ToUInt64(_value, provider);
-        }
+            => Convert.ToUInt64(Value, provider);
 
         #endregion
     }
