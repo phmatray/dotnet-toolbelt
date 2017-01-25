@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26020.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHelpers", "SimpleHelpers\SimpleHelpers.csproj", "{E7C4E2DA-9D92-455E-A1AF-53104C830DC5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".documentation", ".documentation", "{4F8155C2-709A-4D84-91B1-18017B30E35D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev", "dev", "{C66D84A8-7794-4A71-91FC-531BDF8FDC36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

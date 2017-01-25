@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,8 +41,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelloHelper.cs" />
+    <Compile Include="Extensions\ArrayExtension.cs" />
+    <Compile Include="Extensions\ComparableExtension.cs" />
+    <Compile Include="Extensions\ConditionExtension.cs" />
+    <Compile Include="Extensions\DateTimeExtension.cs" />
+    <Compile Include="Extensions\EnumerableExtension.cs" />
+    <Compile Include="Extensions\EnumExtension.cs" />
+    <Compile Include="Extensions\FileAttributesExtension.cs" />
+    <Compile Include="Extensions\ListExtension.cs" />
+    <Compile Include="Extensions\NumberExtension.cs" />
+    <Compile Include="Extensions\ObjectExtension.cs" />
+    <Compile Include="Extensions\SecureStringExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Helpers\AssemblyHelper.cs" />
+    <Compile Include="Helpers\ConsoleHelper.cs" />
+    <Compile Include="Helpers\ExceptionHelper.cs" />
+    <Compile Include="Helpers\SerializerHelper.cs" />
+    <Compile Include="Helpers\ValidationHelper.cs" />
+    <Compile Include="Helpers\WebRequestHelper.cs" />
+    <Compile Include="Patterns\Repository\IModel.cs" />
+    <Compile Include="Patterns\Repository\IRepository.cs" />
+    <Compile Include="Patterns\Repository\IRepositoryAsync.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Clock.cs" />
+    <Compile Include="Tools\Keyword.cs" />
+    <Compile Include="Tools\NumberAnalyzer.cs" />
+    <Compile Include="Tools\PasswordFactory.cs" />
+    <Compile Include="Tools\SingletonBase.cs" />
+    <Compile Include="Tools\StaticRandom.cs" />
+    <Compile Include="Tools\TimeSpanPicker.cs" />
+    <Compile Include="Types\MyString.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
