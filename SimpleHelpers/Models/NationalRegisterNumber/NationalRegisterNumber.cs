@@ -70,7 +70,7 @@ namespace SimpleHelpers.Models.NationalRegisterNumber
                 // A noter qu'en cas de changement de genre, la personne reçoit un nouveau numéro national.
                 // Le programme est donc toujours capable de connaître le genre d'un individu.
 
-                if (IsBisNumber && IsGenreKnown) // augmenté de 40 si le genre est inconnu
+                if (IsBisNumber && !IsGenreKnown) // augmenté de 40 si le genre est inconnu
                     return null;
 
                 return (_nrnParts.XXXi & 1) == 1 ? "M" : "F";
@@ -78,7 +78,7 @@ namespace SimpleHelpers.Models.NationalRegisterNumber
         }
 
         public bool IsGenreKnown
-            => _nrnParts.MMi / 20 == 1;
+            => !IsBisNumber || _nrnParts.MMi / 20 == 2;
 
         public string Birthdate
             => $"{_nrnParts.DD}/{_nrnParts.MMi % 20:D2}/{Century:D2}{_nrnParts.YY}";

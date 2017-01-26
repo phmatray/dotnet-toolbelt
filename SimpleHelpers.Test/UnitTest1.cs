@@ -23,6 +23,7 @@ namespace SimpleHelpers.Test
             Assert.AreEqual(false, nrn.IsBisNumber);
             Assert.AreEqual(true, nrn.IsBornBefore2000);
             Assert.AreEqual(false, nrn.IsBornAfter2000);
+            Assert.AreEqual(true, nrn.IsGenreKnown);
         }
 
         [TestMethod]
@@ -42,6 +43,7 @@ namespace SimpleHelpers.Test
             Assert.AreEqual(false, nrn.IsBisNumber);
             Assert.AreEqual(false, nrn.IsBornBefore2000);
             Assert.AreEqual(true, nrn.IsBornAfter2000);
+            Assert.AreEqual(true, nrn.IsGenreKnown);
         }
 
         [TestMethod]
@@ -61,6 +63,7 @@ namespace SimpleHelpers.Test
             Assert.AreEqual(false, nrn.IsBisNumber);
             Assert.AreEqual(true, nrn.IsBornBefore2000);
             Assert.AreEqual(false, nrn.IsBornAfter2000);
+            Assert.AreEqual(true, nrn.IsGenreKnown);
         }
 
         [TestMethod]
@@ -80,6 +83,7 @@ namespace SimpleHelpers.Test
             Assert.AreEqual(false, nrn.IsBisNumber);
             Assert.AreEqual(false, nrn.IsBornBefore2000);
             Assert.AreEqual(true, nrn.IsBornAfter2000);
+            Assert.AreEqual(true, nrn.IsGenreKnown);
         }
 
         [TestMethod]
@@ -99,6 +103,7 @@ namespace SimpleHelpers.Test
             Assert.AreEqual(false, nrn.IsBisNumber);
             Assert.AreEqual(false, nrn.IsBornBefore2000);
             Assert.AreEqual(false, nrn.IsBornAfter2000);
+            Assert.AreEqual(true, nrn.IsGenreKnown);
         }
 
         [TestMethod]
@@ -118,6 +123,7 @@ namespace SimpleHelpers.Test
             Assert.AreEqual(true, nrn.IsBisNumber);
             Assert.AreEqual(false, nrn.IsBornBefore2000);
             Assert.AreEqual(false, nrn.IsBornAfter2000);
+            Assert.AreEqual(true, nrn.IsGenreKnown);
         }
 
         [TestMethod]
@@ -137,6 +143,7 @@ namespace SimpleHelpers.Test
             Assert.AreEqual(true, nrn.IsBisNumber);
             Assert.AreEqual(false, nrn.IsBornBefore2000);
             Assert.AreEqual(false, nrn.IsBornAfter2000);
+            Assert.AreEqual(false, nrn.IsGenreKnown);
         }
     }
 }
