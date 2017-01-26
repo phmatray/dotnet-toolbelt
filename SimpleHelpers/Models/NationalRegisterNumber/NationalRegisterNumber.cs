@@ -121,5 +121,9 @@ namespace SimpleHelpers.Models.NationalRegisterNumber
             }
         }
 
+        public override string ToString()
+        {
+            return NRN;
+        }
     }
 }

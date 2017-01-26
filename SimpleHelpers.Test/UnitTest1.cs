@@ -17,6 +17,7 @@ namespace SimpleHelpers.Test
 
             // Assert
             Assert.AreEqual("88.08.01-271.51", nrn.NRN);
+            Assert.AreEqual("88.08.01-271.51", nrn.ToString());
             Assert.AreEqual("01/08/1988", nrn.Birthdate);
             Assert.AreEqual("M", nrn.Genre);
             Assert.AreEqual(BirthdateType.Ok, nrn.BirthdateType);
@@ -37,6 +38,7 @@ namespace SimpleHelpers.Test
 
             // Assert
             Assert.AreEqual("09.09.29-172.15", nrn.NRN);
+            Assert.AreEqual("09.09.29-172.15", nrn.ToString());
             Assert.AreEqual("29/09/2009", nrn.Birthdate);
             Assert.AreEqual("F", nrn.Genre);
             Assert.AreEqual(BirthdateType.Ok, nrn.BirthdateType);
@@ -57,6 +59,7 @@ namespace SimpleHelpers.Test
 
             // Assert
             Assert.AreEqual("40.00.00-955.79", nrn.NRN);
+            Assert.AreEqual("40.00.00-955.79", nrn.ToString());
             Assert.AreEqual("00/00/1940", nrn.Birthdate);
             Assert.AreEqual("M", nrn.Genre);
             Assert.AreEqual(BirthdateType.Incomplete, nrn.BirthdateType);
@@ -77,6 +80,7 @@ namespace SimpleHelpers.Test
 
             // Assert
             Assert.AreEqual("40.00.01-001.62", nrn.NRN);
+            Assert.AreEqual("40.00.01-001.62", nrn.ToString());
             Assert.AreEqual("01/00/2040", nrn.Birthdate);
             Assert.AreEqual("M", nrn.Genre);
             Assert.AreEqual(BirthdateType.Incomplete, nrn.BirthdateType);
@@ -97,6 +101,7 @@ namespace SimpleHelpers.Test
 
             // Assert
             Assert.AreEqual("00.00.01-001.66", nrn.NRN);
+            Assert.AreEqual("00.00.01-001.66", nrn.ToString());
             Assert.AreEqual("01/00/0000", nrn.Birthdate);
             Assert.AreEqual("M", nrn.Genre);
             Assert.AreEqual(BirthdateType.Unknown, nrn.BirthdateType);
@@ -117,6 +122,7 @@ namespace SimpleHelpers.Test
 
             // Assert
             Assert.AreEqual("00.40.01-001.55", nrn.NRN);
+            Assert.AreEqual("00.40.01-001.55", nrn.ToString());
             Assert.AreEqual("01/00/0000", nrn.Birthdate);
             Assert.AreEqual("M", nrn.Genre);
             Assert.AreEqual(BirthdateType.Unknown, nrn.BirthdateType);
@@ -137,6 +143,7 @@ namespace SimpleHelpers.Test
 
             // Assert
             Assert.AreEqual("00.20.01-001.66", nrn.NRN);
+            Assert.AreEqual("00.20.01-001.66", nrn.ToString());
             Assert.AreEqual("01/00/0000", nrn.Birthdate);
             Assert.AreEqual(null, nrn.Genre);
             Assert.AreEqual(BirthdateType.Unknown, nrn.BirthdateType);
