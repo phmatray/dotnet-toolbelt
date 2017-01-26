@@ -61,6 +61,9 @@
     <Compile Include="Helpers\SerializerHelper.cs" />
     <Compile Include="Helpers\ValidationHelper.cs" />
     <Compile Include="Helpers\WebRequestHelper.cs" />
+    <Compile Include="Models\NationalRegisterNumber\BirthdateType.cs" />
+    <Compile Include="Models\NationalRegisterNumber\NationalRegisterNumberParts.cs" />
+    <Compile Include="Models\NationalRegisterNumber\NationalRegisterNumber.cs" />
     <Compile Include="Patterns\Repository\IModel.cs" />
     <Compile Include="Patterns\Repository\IRepository.cs" />
     <Compile Include="Patterns\Repository\IRepositoryAsync.cs" />
