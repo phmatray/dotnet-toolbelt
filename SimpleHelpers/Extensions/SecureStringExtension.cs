@@ -23,11 +23,16 @@ namespace SimpleHelpers.Extensions
         /// <returns></returns>
         public static SecureString ConvertToSecureString(this string source)
         {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
             var secureString = new SecureString();
 
             if (source.Length > 0)
+            {
                 foreach (char c in source)
                     secureString.AppendChar(c);
+            }
 
             return secureString;
         }
@@ -39,6 +44,9 @@ namespace SimpleHelpers.Extensions
         /// <returns></returns>
         public static string ConvertToString(this SecureString source)
         {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
             IntPtr unmanagedString = IntPtr.Zero;
             try
             {

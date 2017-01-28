@@ -35,7 +35,9 @@ namespace SimpleHelpers.Extensions
         /// <exception cref="System.ArgumentNullException">characters</exception>
         public static bool ContainsAny(this string text, string characters)
         {
-            if (string.IsNullOrWhiteSpace(characters))
+            if (text == null)
+                throw new ArgumentNullException(nameof(text));
+            if (characters == null)
                 throw new ArgumentNullException(nameof(characters));
 
             return text.ContainsAny(characters.ToCharArray());
@@ -51,10 +53,10 @@ namespace SimpleHelpers.Extensions
         /// <exception cref="System.ArgumentOutOfRangeException">characters</exception>
         public static bool ContainsAny(this string text, params char[] characters)
         {
+            if (text == null)
+                throw new ArgumentNullException(nameof(text));
             if (characters == null)
                 throw new ArgumentNullException(nameof(characters));
-            if (characters.Count() <= 0)
-                throw new ArgumentOutOfRangeException(nameof(characters));
 
             return text.IndexOfAny(characters) != -1;
         }
@@ -68,7 +70,9 @@ namespace SimpleHelpers.Extensions
         /// <exception cref="System.ArgumentNullException">characters</exception>
         public static string RemoveAny(this string text, string characters)
         {
-            if (string.IsNullOrWhiteSpace(characters))
+            if (text == null)
+                throw new ArgumentNullException(nameof(text));
+            if (characters == null)
                 throw new ArgumentNullException(nameof(characters));
 
             return text.RemoveAny(characters.ToCharArray());
@@ -86,7 +90,7 @@ namespace SimpleHelpers.Extensions
         {
             if (characters == null)
                 throw new ArgumentNullException(nameof(characters));
-            if (characters.Count() <= 0)
+            if (characters.Length <= 0)
                 throw new ArgumentOutOfRangeException(nameof(characters));
 
             var sb = new StringBuilder(text);
