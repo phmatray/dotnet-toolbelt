@@ -92,8 +92,15 @@ namespace SimpleHelpers.Extensions
 
             int index = 0;
             foreach (var t in jaggedArray)
-                foreach (var t1 in t)
-                    retval[index++] = t1;
+            {
+                if (t != null)
+                {
+                    foreach (var t1 in t)
+                    {
+                        retval[index++] = t1;
+                    }
+                }
+            }
 
             return retval;
         }
@@ -126,15 +133,11 @@ namespace SimpleHelpers.Extensions
             var columns = multiArray.CountColumns();
             var retval = new T[lines][];
 
-            for (long i = 0; i < lines; i++)
+            for (int i = 0; i < lines; i++)
             {
                 retval[i] = new T[columns];
-                for (long j = 0; j < columns; j++)
-                {
-                    var multiArrayI = multiArray.GetLowerBound(0);
-                    var multiArrayJ = multiArray.GetLowerBound(1);
-                    retval[i][j] = multiArray[multiArrayI + i, multiArrayJ + j];
-                }
+                for (int j = 0; j < columns; j++)
+                    retval[i][j] = multiArray.GetValue<T>(i, j);
             }
 
             return retval;
@@ -199,6 +202,22 @@ namespace SimpleHelpers.Extensions
             }
 
             return 0;
+        }
+
+        public static T GetValue<T>(this T[,] multiArray, int rowIndex, int columnIndex)
+        {
+            if (multiArray == null)
+                throw new ArgumentNullException(nameof(multiArray));
+            if (multiArray.Length == 0)
+                throw new ArgumentException("Value cannot be an empty collection.", nameof(multiArray));
+            if (rowIndex < 0 || rowIndex >= multiArray.GetLength(0))
+                throw new ArgumentOutOfRangeException(nameof(rowIndex));
+            if (columnIndex < 0 || columnIndex >= multiArray.GetLength(1))
+                throw new ArgumentOutOfRangeException(nameof(columnIndex));
+
+            var retval = multiArray[multiArray.GetLowerBound(0) + rowIndex, multiArray.GetLowerBound(1) + columnIndex];
+
+            return retval;
         }
 
         #endregion
