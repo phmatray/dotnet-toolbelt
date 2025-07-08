@@ -9,14 +9,46 @@ namespace CCrossThrowIf.Demo
 {
     public class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
+        {
+            Console.WriteLine("CCross.ThrowIf Demo Application");
+            Console.WriteLine("================================");
+            Console.WriteLine("1. Run original expression-based API demo");
+            Console.WriteLine("2. Run new Guard API demo");
+            Console.WriteLine("3. Run innovative features demo");
+            Console.WriteLine("4. Exit");
+            Console.Write("\nSelect option: ");
+            
+            var choice = Console.ReadLine();
+            
+            switch (choice)
+            {
+                case "1":
+                    RunOriginalDemo();
+                    break;
+                case "2":
+                    new GuardDemo().DemonstrateNewApi();
+                    break;
+                case "3":
+                    await new InnovativeGuardDemo().DemonstrateAllFeatures();
+                    break;
+                case "4":
+                    return;
+                default:
+                    Console.WriteLine("Invalid option");
+                    break;
+            }
+
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
+        }
+
+        static void RunOriginalDemo()
         {
             Test<ArgumentNullException>();
             double d = default(double);
             decimal dec = default(decimal);
             WithThrowIt(11);
-
-            Console.ReadLine();
         }
 
         public static string WithoutThrowIt(string arg)

@@ -1,7 +1,5 @@
-using System;
 using System.Linq.Expressions;
 using CCrossThrowIf;
-using Xunit;
 
 namespace CCrossThrowIfTests;
 
@@ -12,7 +10,7 @@ public class HelperTests
     [Fact]
     public void GetMetadata_WithValidExpression_ReturnsMetadata()
     {
-        int testValue = 42;
+        const int testValue = 42;
         Expression<Func<int>> expression = () => testValue;
 
         var metadata = expression.GetMetadata();
@@ -25,7 +23,7 @@ public class HelperTests
     [Fact]
     public void GetMetadata_WithStringExpression_ReturnsMetadata()
     {
-        string testValue = "test string";
+        const string testValue = "test string";
         Expression<Func<string>> expression = () => testValue;
 
         var metadata = expression.GetMetadata();
@@ -42,7 +40,7 @@ public class HelperTests
     [Fact]
     public void CreateException_WithExceptionType_CreatesExceptionWithMessage()
     {
-        string message = "Test exception message";
+        const string message = "Test exception message";
 
         var exception = Helper.CreateException<Exception>(message);
 
@@ -54,8 +52,8 @@ public class HelperTests
     [Fact]
     public void CreateException_WithArgumentNullException_CreatesProperException()
     {
-        string message = "Parameter cannot be null";
-        string paramName = "testParam";
+        const string message = "Parameter cannot be null";
+        const string paramName = "testParam";
 
         var exception = Helper.CreateException<ArgumentNullException>(message, paramName);
 
@@ -68,9 +66,9 @@ public class HelperTests
     [Fact]
     public void CreateException_WithArgumentOutOfRangeException_CreatesProperException()
     {
-        string message = "Value out of range";
-        string paramName = "testParam";
-        int actualValue = 42;
+        const string message = "Value out of range";
+        const string paramName = "testParam";
+        const int actualValue = 42;
 
         var exception = Helper.CreateException<ArgumentOutOfRangeException>(message, paramName, actualValue);
 
@@ -84,7 +82,7 @@ public class HelperTests
     [Fact]
     public void CreateException_WithInvalidOperationException_CreatesProperException()
     {
-        string message = "Invalid operation";
+        const string message = "Invalid operation";
 
         var exception = Helper.CreateException<InvalidOperationException>(message);
 
@@ -105,8 +103,8 @@ public class HelperTests
     [Fact]
     public void CreateException_WithArgumentException_CreatesProperException()
     {
-        string message = "Invalid argument";
-        string paramName = "testParam";
+        const string message = "Invalid argument";
+        const string paramName = "testParam";
 
         var exception = Helper.CreateException<ArgumentException>(message, paramName);
 
@@ -122,7 +120,7 @@ public class HelperTests
     [Fact]
     public void CreateException_ForException_UsesCorrectConstructorArgs()
     {
-        string message = "Test message";
+        const string message = "Test message";
         
         var exception = Helper.CreateException<Exception>(message);
         
@@ -132,8 +130,8 @@ public class HelperTests
     [Fact]
     public void CreateException_ForArgumentNullException_UsesCorrectConstructorArgs()
     {
-        string message = "Test message";
-        string paramName = "param";
+        const string message = "Test message";
+        const string paramName = "param";
         
         var exception = Helper.CreateException<ArgumentNullException>(message, paramName);
         
@@ -144,8 +142,8 @@ public class HelperTests
     [Fact]
     public void CreateException_ForArgumentOutOfRangeException_UsesCorrectConstructorArgs()
     {
-        string message = "Test message";
-        string paramName = "param";
+        const string message = "Test message";
+        const string paramName = "param";
         object actualValue = 123;
         
         var exception = Helper.CreateException<ArgumentOutOfRangeException>(message, paramName, actualValue);
@@ -158,7 +156,7 @@ public class HelperTests
     [Fact]
     public void CreateException_ForUnknownExceptionType_UsesEmptyConstructorArgs()
     {
-        string message = "Test message";
+        const string message = "Test message";
         
         var exception = Helper.CreateException<CustomTestException>(message);
         
@@ -185,7 +183,7 @@ public class HelperTests
     [Fact]
     public void CreateException_WithEmptyMessage_CreatesExceptionWithEmptyMessage()
     {
-        string message = "";
+        const string message = "";
 
         var exception = Helper.CreateException<Exception>(message);
 
@@ -198,7 +196,7 @@ public class HelperTests
 
 public class CustomTestException : Exception
 {
-    public CustomTestException() : base()
+    public CustomTestException()
     {
     }
     

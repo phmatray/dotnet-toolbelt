@@ -1,7 +1,5 @@
-using System;
 using System.Linq.Expressions;
 using CCrossThrowIf;
-using Xunit;
 
 namespace CCrossThrowIfTests;
 
@@ -12,7 +10,7 @@ public class MetadataTests
     [Fact]
     public void Constructor_WithValidExpression_ExtractsNameAndValue()
     {
-        int testValue = 42;
+        const int testValue = 42;
         Expression<Func<int>> expression = () => testValue;
 
         var metadata = new Metadata<int>(expression);
@@ -24,7 +22,7 @@ public class MetadataTests
     [Fact]
     public void Constructor_WithStringExpression_ExtractsNameAndValue()
     {
-        string testValue = "Hello World";
+        const string testValue = "Hello World";
         Expression<Func<string>> expression = () => testValue;
 
         var metadata = new Metadata<string>(expression);
@@ -159,8 +157,8 @@ public class MetadataTests
     [Fact]
     public void GetValue_WithCalculatedValue_ReturnsCalculatedResult()
     {
-        int a = 10;
-        int b = 20;
+        const int a = 10;
+        const int b = 20;
         Expression<Func<int>> expression = () => a + b;
 
         // This will throw because it's not a simple member expression
@@ -170,7 +168,7 @@ public class MetadataTests
     [Fact]
     public void GetValue_WithArrayElementExpression_ThrowsArgumentException()
     {
-        int[] array = { 1, 2, 3 };
+        int[] array = [1, 2, 3];
         Expression<Func<int>> expression = () => array[1];
 
         // This will throw because it's not a simple member expression
@@ -196,7 +194,7 @@ public class MetadataTests
     [Fact]
     public void Metadata_WithBooleanExpression_ExtractsNameAndValue()
     {
-        bool testValue = true;
+        const bool testValue = true;
         Expression<Func<bool>> expression = () => testValue;
 
         var metadata = new Metadata<bool>(expression);
@@ -208,7 +206,7 @@ public class MetadataTests
     [Fact]
     public void Metadata_WithEnumExpression_ExtractsNameAndValue()
     {
-        TestEnum testValue = TestEnum.Second;
+        const TestEnum testValue = TestEnum.Second;
         Expression<Func<TestEnum>> expression = () => testValue;
 
         var metadata = new Metadata<TestEnum>(expression);
@@ -225,14 +223,14 @@ public class MetadataTests
 
     private class TestClass
     {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public NestedClass? Nested { get; set; }
+        public int Id { get; init; }
+        public string? Name { get; init; }
+        public NestedClass? Nested { get; init; }
     }
 
     private class NestedClass
     {
-        public string? Value { get; set; }
+        public string? Value { get; init; }
     }
 
     private class TestClassWithField
