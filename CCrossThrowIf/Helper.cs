@@ -11,32 +11,74 @@ namespace CCrossThrowIf
             return new Metadata<T>(expression);
         }
 
-        public static TException CreateException<TException>(string message)
+        public static TException CreateException<TException>(string? message)
             where TException : Exception, new()
         {
             var args = CreateArgsException<TException>(message);
             return (TException)Activator.CreateInstance(typeof(TException), args);
         }
 
-        public static TException CreateException<TException>(string message, string name, object checkedValue = null)
+        public static TException CreateException<TException>(string? message, string name, object? checkedValue = null)
             where TException : Exception, new()
         {
             var args = CreateArgsException<TException>(message, name, checkedValue);
             return (TException)Activator.CreateInstance(typeof(TException), args);
         }
 
-        private static object[] CreateArgsException<TException>(string message, string paramName = null, object actualValue = null)
+        private static object[] CreateArgsException<TException>(string? message, string? paramName = null, object? actualValue = null)
         {
-            switch (typeof (TException).Name)
+            var exceptionType = typeof(TException);
+            
+            if (exceptionType == typeof(ArgumentNullException))
             {
-                case nameof(Exception):
-                    return new object[] {message};
-                case nameof(ArgumentNullException):
-                    return new object[] {paramName, message};
-                case nameof(ArgumentOutOfRangeException):
-                    return new object[] {paramName, actualValue, message};
-                default:
-                    return new object[] {};
+                if (paramName != null && message != null)
+                    return new object[] { paramName, message };
+                else if (paramName != null)
+                    return new object[] { paramName };
+                else if (message != null)
+                    return new object[] { message };
+                else
+                    return new object[] { };
+            }
+            else if (exceptionType == typeof(ArgumentOutOfRangeException))
+            {
+                if (paramName != null && actualValue != null && message != null)
+                    return new object[] { paramName, actualValue, message };
+                else if (paramName != null && message != null)
+                    return new object[] { paramName, message };
+                else if (paramName != null)
+                    return new object[] { paramName };
+                else if (message != null)
+                    return new object[] { null, null, message };
+                else
+                    return new object[] { };
+            }
+            else if (exceptionType == typeof(ArgumentException))
+            {
+                if (message != null && paramName != null)
+                    return new object[] { message, paramName };
+                else if (message != null)
+                    return new object[] { message };
+                else
+                    return new object[] { };
+            }
+            else if (exceptionType == typeof(InvalidOperationException))
+            {
+                if (message != null)
+                    return new object[] { message };
+                else
+                    return new object[] { };
+            }
+            else if (exceptionType == typeof(Exception) || exceptionType.BaseType == typeof(Exception))
+            {
+                if (message != null)
+                    return new object[] { message };
+                else
+                    return new object[] { };
+            }
+            else
+            {
+                return new object[] { };
             }
         }
     }

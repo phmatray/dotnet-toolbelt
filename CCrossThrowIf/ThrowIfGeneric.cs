@@ -13,7 +13,7 @@ namespace CCrossThrowIf
         /// </summary>
         /// <param name="expression">The expression property.</param>
         /// <param name="message">The message.</param>
-        public static void IsNullOrWhiteSpace(Expression<Func<string>> expression, string message = null)
+        public static void IsNullOrWhiteSpace(Expression<Func<string?>> expression, string? message = null)
         {
             var metadata = expression.GetMetadata();
             if (!string.IsNullOrWhiteSpace(metadata.Value))
@@ -28,7 +28,7 @@ namespace CCrossThrowIf
         /// </summary>
         /// <param name="expression">The expression property.</param>
         /// <param name="message">The message.</param>
-        public static void IsNullOrEmpty(Expression<Func<string>> expression, string message = null)
+        public static void IsNullOrEmpty(Expression<Func<string?>> expression, string? message = null)
         {
             var metadata = expression.GetMetadata();
             if (!string.IsNullOrEmpty(metadata.Value))
@@ -51,7 +51,7 @@ namespace CCrossThrowIf
         /// <exception cref="ArgumentOutOfRangeException">
         ///     <paramref name="expression" /> is not greater than zero.
         /// </exception>
-        public static void IsNegativeOrZero(Expression<Func<TimeSpan>> expression, string message = null)
+        public static void IsNegativeOrZero(Expression<Func<TimeSpan>> expression, string? message = null)
         {
             var metadata = expression.GetMetadata();
             if (metadata.Value.Ticks > 0L)
@@ -71,7 +71,7 @@ namespace CCrossThrowIf
         /// <typeparam name="T">A class type.</typeparam>
         /// <param name="expression">The expression property.</param>
         /// <param name="message">The message.</param>
-        public static void IsDefault<T>(Expression<Func<T>> expression, string message = null)
+        public static void IsDefault<T>(Expression<Func<T?>> expression, string? message = null)
             where T : class
         {
             var metadata = expression.GetMetadata();
@@ -88,7 +88,7 @@ namespace CCrossThrowIf
         /// <typeparam name="T">A class type.</typeparam>
         /// <param name="expression">The expression property.</param>
         /// <param name="message">The message.</param>
-        public static void IsNull<T>(Expression<Func<T>> expression, string message = null)
+        public static void IsNull<T>(Expression<Func<T?>> expression, string? message = null)
             where T : class
         {
             var metadata = expression.GetMetadata();
@@ -106,7 +106,7 @@ namespace CCrossThrowIf
         /// <param name="expression">The expression property.</param>
         /// <param name="checkedValue">The specified value.</param>
         /// <param name="message">The message.</param>
-        public static void IsEqualTo<T>(Expression<Func<T>> expression, T checkedValue = default(T), string message = null)
+        public static void IsEqualTo<T>(Expression<Func<T>> expression, T checkedValue = default!, string? message = null)
         {
             var metadata = expression.GetMetadata();
             if (!metadata.Value.Equals(checkedValue))
