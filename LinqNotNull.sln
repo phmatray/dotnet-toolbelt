@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqNotNull.UnitTests", "LinqNotNull.UnitTests\LinqNotNull.UnitTests.csproj", "{349092E9-B1D7-409E-8FAF-A2CE25D8EE30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqNotNull", "LinqNotNull\LinqNotNull.csproj", "{F5C93E55-8B91-4226-A17F-135CD4ED2A69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{39AEAC10-03C6-4DD2-8552-2DAC3EE443E6}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5DB51E75-279D-4FE2-B080-835B38A0D3A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{349092E9-B1D7-409E-8FAF-A2CE25D8EE30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349092E9-B1D7-409E-8FAF-A2CE25D8EE30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349092E9-B1D7-409E-8FAF-A2CE25D8EE30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349092E9-B1D7-409E-8FAF-A2CE25D8EE30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C93E55-8B91-4226-A17F-135CD4ED2A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C93E55-8B91-4226-A17F-135CD4ED2A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C93E55-8B91-4226-A17F-135CD4ED2A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C93E55-8B91-4226-A17F-135CD4ED2A69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5C93E55-8B91-4226-A17F-135CD4ED2A69} = {39AEAC10-03C6-4DD2-8552-2DAC3EE443E6}
+		{349092E9-B1D7-409E-8FAF-A2CE25D8EE30} = {5DB51E75-279D-4FE2-B080-835B38A0D3A2}
+	EndGlobalSection
+EndGlobal
