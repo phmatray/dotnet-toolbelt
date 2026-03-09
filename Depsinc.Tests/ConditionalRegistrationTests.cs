@@ -1,4 +1,4 @@
-using FluentAssertions;
+using Shouldly;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Depsinc.Tests;
@@ -19,10 +19,10 @@ public class ConditionalRegistrationTests
         var serviceProvider = services.BuildServiceProvider();
 
         // Services implementing IConditionalService should be registered
-        serviceProvider.GetService<IConditionalService>().Should().NotBeNull();
+        serviceProvider.GetService<IConditionalService>().ShouldNotBeNull();
 
         // Services not implementing IConditionalService should not be registered
-        serviceProvider.GetService<NonConditionalService>().Should().BeNull();
+        serviceProvider.GetService<NonConditionalService>().ShouldBeNull();
     }
 }
 
