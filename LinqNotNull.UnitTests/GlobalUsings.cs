@@ -1,5 +1,5 @@
 ﻿// Global using directives
 
-global using FluentAssertions;
+global using Shouldly;
 global using LinqNotNull.UnitTests.Data;
 global using Xunit;
