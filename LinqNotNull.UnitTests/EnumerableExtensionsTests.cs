@@ -13,16 +13,16 @@ public class EnumerableExtensionsTests
     private static void AssertNonNullItems<T>(
         IReadOnlyCollection<T> result, int expectedCount, IEnumerable<T> expectedItems)
     {
-        result.Should().NotContainNulls();
-        result.Should().HaveCount(expectedCount);
+        result.ShouldNotContain(null);
+        result.Count().ShouldBe(expectedCount);
     
         if (expectedCount > 0)
         {
-            result.Should().Contain(expectedItems);
+            result.ShouldContain(expectedItems);
         }
         else
         {
-            result.Should().BeEmpty();
+            result.ShouldBeEmpty();
         }
     }
     
@@ -82,9 +82,9 @@ public class EnumerableExtensionsTests
         var result = _products.SelectNotNull(x => x).ToList();
             
         // Assert
-        result.Should().NotContainNulls();
-        result.Should().HaveCount(2);
-        result.Should().OnlyContain(p => p.SKU == "ABC123" || p.SKU == "XYZ789");
+        result.ShouldNotContain(null);
+        result.Count().ShouldBe(2);
+        result.ShouldAllBe(p => p.SKU == "ABC123" || p.SKU == "XYZ789");
     }
         
     [Fact]
@@ -96,9 +96,9 @@ public class EnumerableExtensionsTests
         var result = _products.SelectNotNull(x => x?.Description).ToList();
             
         // Assert
-        result.Should().NotContainNulls();
-        result.Should().HaveCount(1);
-        result.Should().ContainSingle(d => d == "description");
+        result.ShouldNotContain(null);
+        result.Count().ShouldBe(1);
+        result.Where(d => d == "description").Count().ShouldBe(1);
     }
     
     [Fact]
@@ -110,9 +110,9 @@ public class EnumerableExtensionsTests
         var result = _products.WhereNotNull().ToList();
             
         // Assert
-        result.Should().NotContainNulls();
-        result.Should().HaveCount(2);
-        result.Should().OnlyContain(p => p.SKU == "ABC123" || p.SKU == "XYZ789");
+        result.ShouldNotContain(null);
+        result.Count().ShouldBe(2);
+        result.ShouldAllBe(p => p.SKU == "ABC123" || p.SKU == "XYZ789");
     }
     
     [Fact]
