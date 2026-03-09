@@ -1,5 +1,5 @@
 using Depsinc.Tests.Data;
-using FluentAssertions;
+using Shouldly;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Depsinc.Tests;
@@ -19,10 +19,10 @@ public class DependencyResolutionTests
 
         var dependentService = serviceProvider.GetService<IDependentService>();
 
-        dependentService.Should().NotBeNull();
+        dependentService.ShouldNotBeNull();
         if (dependentService == null) return;
-        dependentService.SingletonService.Should().NotBeNull();
-        dependentService.ScopedService.Should().NotBeNull();
-        dependentService.TransientService.Should().NotBeNull();
+        dependentService.SingletonService.ShouldNotBeNull();
+        dependentService.ScopedService.ShouldNotBeNull();
+        dependentService.TransientService.ShouldNotBeNull();
     }
 }

@@ -1,5 +1,5 @@
 using Depsinc.Tests.Data;
-using FluentAssertions;
+using Shouldly;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Depsinc.Tests;
@@ -16,8 +16,8 @@ public class ServiceCollectionExtensionsTests
         var service1 = serviceProvider.GetService<IMySingletonService>();
         var service2 = serviceProvider.GetService<IMySingletonService>();
 
-        service1.Should().NotBeNull();
-        service1.Should().BeSameAs(service2); // Singleton services should be the same instance
+        service1.ShouldNotBeNull();
+        service1.ShouldBeSameAs(service2); // Singleton services should be the same instance
     }
 
     [Fact]
@@ -33,10 +33,10 @@ public class ServiceCollectionExtensionsTests
         var service2 = scope1.ServiceProvider.GetService<IMyScopedService>();
         var service3 = scope2.ServiceProvider.GetService<IMyScopedService>();
 
-        service1.Should().NotBeNull();
-        service3.Should().NotBeNull();
-        service1.Should().BeSameAs(service2); // Scoped services should be the same within the same scope
-        service1.Should().NotBeSameAs(service3); // Scoped services should be different across scopes
+        service1.ShouldNotBeNull();
+        service3.ShouldNotBeNull();
+        service1.ShouldBeSameAs(service2); // Scoped services should be the same within the same scope
+        service1.ShouldNotBeSameAs(service3); // Scoped services should be different across scopes
     }
 
     [Fact]
@@ -49,9 +49,9 @@ public class ServiceCollectionExtensionsTests
         var service1 = serviceProvider.GetService<IMyTransientService>();
         var service2 = serviceProvider.GetService<IMyTransientService>();
 
-        service1.Should().NotBeNull();
-        service2.Should().NotBeNull();
-        service1.Should().NotBeSameAs(service2); // Transient services should always be different instances
+        service1.ShouldNotBeNull();
+        service2.ShouldNotBeNull();
+        service1.ShouldNotBeSameAs(service2); // Transient services should always be different instances
     }
 }
 
