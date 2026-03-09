@@ -24,7 +24,7 @@ string? testValue = null;
     [Fact]
     public void IsNullOrWhiteSpace_WhenStringIsEmpty_ThrowsSpecifiedException()
     {
-        const string testValue = "";
+        string testValue = "";
         Expression<Func<string?>> expression = () => testValue;
 
         Assert.Throws<InvalidOperationException>(() =>
@@ -34,7 +34,7 @@ string? testValue = null;
     [Fact]
     public void IsNullOrWhiteSpace_WhenStringIsWhiteSpace_ThrowsSpecifiedException()
     {
-        const string testValue = "   ";
+        string testValue = "   ";
         Expression<Func<string?>> expression = () => testValue;
 
         Assert.Throws<InvalidOperationException>(() =>
@@ -44,7 +44,7 @@ string? testValue = null;
     [Fact]
     public void IsNullOrWhiteSpace_WhenStringIsValid_DoesNotThrow()
     {
-        const string testValue = "valid";
+        string testValue = "valid";
         Expression<Func<string?>> expression = () => testValue;
 
         ThrowIf<InvalidOperationException>.IsNullOrWhiteSpace(expression);
@@ -80,7 +80,7 @@ string? testValue = null;
     [Fact]
     public void IsNullOrEmpty_WhenStringIsEmpty_ThrowsSpecifiedException()
     {
-        const string testValue = "";
+        string testValue = "";
         Expression<Func<string?>> expression = () => testValue;
 
         Assert.Throws<InvalidOperationException>(() =>
@@ -90,7 +90,7 @@ string? testValue = null;
     [Fact]
     public void IsNullOrEmpty_WhenStringIsValid_DoesNotThrow()
     {
-        const string testValue = "valid";
+        string testValue = "valid";
         Expression<Func<string?>> expression = () => testValue;
 
         ThrowIf<InvalidOperationException>.IsNullOrEmpty(expression);
@@ -99,7 +99,7 @@ string? testValue = null;
     [Fact]
     public void IsNullOrEmpty_WithCustomMessage_ThrowsWithCustomMessage()
     {
-        const string testValue = "";
+        string testValue = "";
         Expression<Func<string?>> expression = () => testValue;
         const string customMessage = "String cannot be empty";
 
@@ -178,7 +178,7 @@ string? testValue = null;
     [Fact]
     public void IsDefault_WhenValueIsNotNull_DoesNotThrow()
     {
-        const string testValue = "not null";
+        string testValue = "not null";
         Expression<Func<string?>> expression = () => testValue;
 
         ThrowIf<InvalidOperationException>.IsDefault(expression);
@@ -216,7 +216,7 @@ string? testValue = null;
     [Fact]
     public void IsNull_WhenValueIsNotNull_DoesNotThrow()
     {
-        const string testValue = "not null";
+        string testValue = "not null";
         Expression<Func<string?>> expression = () => testValue;
 
         ThrowIf<InvalidOperationException>.IsNull(expression);
@@ -240,7 +240,7 @@ string? testValue = null;
     [Fact]
     public void IsEqualTo_WhenValueIsEqualToTestValue_ThrowsSpecifiedException()
     {
-        const int testValue = 5;
+        int testValue = 5;
         Expression<Func<int>> expression = () => testValue;
 
         var exception = Assert.Throws<InvalidOperationException>(() =>
@@ -252,7 +252,7 @@ string? testValue = null;
     [Fact]
     public void IsEqualTo_WhenValueIsNotEqualToTestValue_DoesNotThrow()
     {
-        const int testValue = 5;
+        int testValue = 5;
         Expression<Func<int>> expression = () => testValue;
 
         ThrowIf<InvalidOperationException>.IsEqualTo(expression, 10);
@@ -261,7 +261,7 @@ string? testValue = null;
     [Fact]
     public void IsEqualTo_WithDefaultValue_WhenValueIsNotDefault_DoesNotThrow()
     {
-        const int testValue = 5;
+        int testValue = 5;
         Expression<Func<int>> expression = () => testValue;
 
         ThrowIf<InvalidOperationException>.IsEqualTo(expression);
@@ -270,7 +270,7 @@ string? testValue = null;
     [Fact]
     public void IsEqualTo_WithCustomMessage_ThrowsWithCustomMessage()
     {
-        const int testValue = 5;
+        int testValue = 5;
         Expression<Func<int>> expression = () => testValue;
         const string customMessage = "Values cannot be equal";
 
@@ -315,7 +315,7 @@ string? testValue = null;
     [Fact]
     public void ThrowIfGeneric_WithArgumentOutOfRangeException_CreatesProperException()
     {
-        const int testValue = 5;
+        int testValue = 5;
         Expression<Func<int>> expression = () => testValue;
 
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
