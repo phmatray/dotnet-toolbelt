@@ -10,7 +10,7 @@ public class MetadataTests
     [Fact]
     public void Constructor_WithValidExpression_ExtractsNameAndValue()
     {
-        const int testValue = 42;
+        int testValue = 42;
         Expression<Func<int>> expression = () => testValue;
 
         var metadata = new Metadata<int>(expression);
@@ -22,7 +22,7 @@ public class MetadataTests
     [Fact]
     public void Constructor_WithStringExpression_ExtractsNameAndValue()
     {
-        const string testValue = "Hello World";
+        string testValue = "Hello World";
         Expression<Func<string>> expression = () => testValue;
 
         var metadata = new Metadata<string>(expression);
@@ -194,7 +194,7 @@ public class MetadataTests
     [Fact]
     public void Metadata_WithBooleanExpression_ExtractsNameAndValue()
     {
-        const bool testValue = true;
+        bool testValue = true;
         Expression<Func<bool>> expression = () => testValue;
 
         var metadata = new Metadata<bool>(expression);
@@ -206,7 +206,7 @@ public class MetadataTests
     [Fact]
     public void Metadata_WithEnumExpression_ExtractsNameAndValue()
     {
-        const TestEnum testValue = TestEnum.Second;
+        TestEnum testValue = TestEnum.Second;
         Expression<Func<TestEnum>> expression = () => testValue;
 
         var metadata = new Metadata<TestEnum>(expression);

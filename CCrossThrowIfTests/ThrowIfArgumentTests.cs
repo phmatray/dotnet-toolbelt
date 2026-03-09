@@ -24,7 +24,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNullOrWhiteSpace_WhenStringIsEmpty_ThrowsArgumentNullException()
     {
-        const string testValue = "";
+        string testValue = "";
         Expression<Func<string?>> expression = () => testValue;
 
         var exception = Assert.Throws<ArgumentNullException>(() =>
@@ -36,7 +36,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNullOrWhiteSpace_WhenStringIsWhiteSpace_ThrowsArgumentNullException()
     {
-        const string testValue = "   ";
+        string testValue = "   ";
         Expression<Func<string?>> expression = () => testValue;
 
         var exception = Assert.Throws<ArgumentNullException>(() =>
@@ -48,7 +48,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNullOrWhiteSpace_WhenStringIsValid_DoesNotThrow()
     {
-        const string testValue = "valid";
+        string testValue = "valid";
         Expression<Func<string?>> expression = () => testValue;
 
         ThrowIf.Argument.IsNullOrWhiteSpace(expression);
@@ -84,7 +84,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNullOrEmpty_WhenStringIsEmpty_ThrowsArgumentNullException()
     {
-        const string testValue = "";
+        string testValue = "";
         Expression<Func<string?>> expression = () => testValue;
 
         Assert.Throws<ArgumentNullException>(() =>
@@ -94,7 +94,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNullOrEmpty_WhenStringIsValid_DoesNotThrow()
     {
-        const string testValue = "valid";
+        string testValue = "valid";
         Expression<Func<string?>> expression = () => testValue;
 
         ThrowIf.Argument.IsNullOrEmpty(expression);
@@ -214,7 +214,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsTrue_WhenBoolIsTrue_ThrowsArgumentException()
     {
-        const bool testValue = true;
+        bool testValue = true;
         Expression<Func<bool>> expression = () => testValue;
 
         var exception = Assert.Throws<ArgumentException>(() =>
@@ -226,7 +226,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsTrue_WhenBoolIsFalse_DoesNotThrow()
     {
-        const bool testValue = false;
+        bool testValue = false;
         Expression<Func<bool>> expression = () => testValue;
 
         ThrowIf.Argument.IsTrue(expression);
@@ -235,7 +235,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsFalse_WhenBoolIsFalse_ThrowsArgumentException()
     {
-        const bool testValue = false;
+        bool testValue = false;
         Expression<Func<bool>> expression = () => testValue;
 
         var exception = Assert.Throws<ArgumentException>(() =>
@@ -247,7 +247,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsFalse_WhenBoolIsTrue_DoesNotThrow()
     {
-        const bool testValue = true;
+        bool testValue = true;
         Expression<Func<bool>> expression = () => testValue;
 
         ThrowIf.Argument.IsFalse(expression);
@@ -320,7 +320,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsPositiveOrZero_WhenIntIsNegative_DoesNotThrow()
     {
-        const int testValue = -1;
+        int testValue = -1;
         Expression<Func<int>> expression = () => testValue;
 
         ThrowIf.Argument.IsPositiveOrZero(expression);
@@ -341,7 +341,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNegativeOrZero_WhenIntIsPositive_DoesNotThrow()
     {
-        const int testValue = 1;
+        int testValue = 1;
         Expression<Func<int>> expression = () => testValue;
 
         ThrowIf.Argument.IsNegativeOrZero(expression);
@@ -350,7 +350,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenIntIsGreaterThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const int testValue = 10;
+        int testValue = 10;
         Expression<Func<int>> expression = () => testValue;
 
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -362,7 +362,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenIntIsNotGreaterThanLimit_DoesNotThrow()
     {
-        const int testValue = 3;
+        int testValue = 3;
         Expression<Func<int>> expression = () => testValue;
 
         ThrowIf.Argument.IsGreaterThan(expression, 5);
@@ -371,7 +371,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenIntIsLowerThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const int testValue = 3;
+        int testValue = 3;
         Expression<Func<int>> expression = () => testValue;
 
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -383,7 +383,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenIntIsNotLowerThanLimit_DoesNotThrow()
     {
-        const int testValue = 10;
+        int testValue = 10;
         Expression<Func<int>> expression = () => testValue;
 
         ThrowIf.Argument.IsLowerThan(expression, 5);
@@ -392,7 +392,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IntBase_WithCustomMessage_ThrowsWithCustomMessage()
     {
-        const int testValue = 1;
+        int testValue = 1;
         Expression<Func<int>> expression = () => testValue;
         const string customMessage = "Custom int error";
 
@@ -467,7 +467,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsPositiveOrZero_WhenLongIsNegative_DoesNotThrow()
     {
-        const long testValue = -1L;
+        long testValue = -1L;
         Expression<Func<long>> expression = () => testValue;
 
         ThrowIf.Argument.IsPositiveOrZero(expression);
@@ -488,7 +488,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNegativeOrZero_WhenLongIsPositive_DoesNotThrow()
     {
-        const long testValue = 1L;
+        long testValue = 1L;
         Expression<Func<long>> expression = () => testValue;
 
         ThrowIf.Argument.IsNegativeOrZero(expression);
@@ -497,7 +497,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenLongIsGreaterThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const long testValue = 10L;
+        long testValue = 10L;
         Expression<Func<long>> expression = () => testValue;
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -507,7 +507,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenLongIsNotGreaterThanLimit_DoesNotThrow()
     {
-        const long testValue = 3L;
+        long testValue = 3L;
         Expression<Func<long>> expression = () => testValue;
 
         ThrowIf.Argument.IsGreaterThan(expression, 5L);
@@ -516,7 +516,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenLongIsLowerThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const long testValue = 3L;
+        long testValue = 3L;
         Expression<Func<long>> expression = () => testValue;
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -526,7 +526,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenLongIsNotLowerThanLimit_DoesNotThrow()
     {
-        const long testValue = 10L;
+        long testValue = 10L;
         Expression<Func<long>> expression = () => testValue;
 
         ThrowIf.Argument.IsLowerThan(expression, 5L);
@@ -597,7 +597,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsPositiveOrZero_WhenFloatIsNegative_DoesNotThrow()
     {
-        const float testValue = -1.0F;
+        float testValue = -1.0F;
         Expression<Func<float>> expression = () => testValue;
 
         ThrowIf.Argument.IsPositiveOrZero(expression);
@@ -618,7 +618,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNegativeOrZero_WhenFloatIsPositive_DoesNotThrow()
     {
-        const float testValue = 1.0F;
+        float testValue = 1.0F;
         Expression<Func<float>> expression = () => testValue;
 
         ThrowIf.Argument.IsNegativeOrZero(expression);
@@ -627,7 +627,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenFloatIsGreaterThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const float testValue = 10.5F;
+        float testValue = 10.5F;
         Expression<Func<float>> expression = () => testValue;
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -637,7 +637,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenFloatIsNotGreaterThanLimit_DoesNotThrow()
     {
-        const float testValue = 3.0F;
+        float testValue = 3.0F;
         Expression<Func<float>> expression = () => testValue;
 
         ThrowIf.Argument.IsGreaterThan(expression, 5.0F);
@@ -646,7 +646,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenFloatIsLowerThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const float testValue = 3.0F;
+        float testValue = 3.0F;
         Expression<Func<float>> expression = () => testValue;
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -656,7 +656,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenFloatIsNotLowerThanLimit_DoesNotThrow()
     {
-        const float testValue = 10.0F;
+        float testValue = 10.0F;
         Expression<Func<float>> expression = () => testValue;
 
         ThrowIf.Argument.IsLowerThan(expression, 5.0F);
@@ -727,7 +727,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsPositiveOrZero_WhenDoubleIsNegative_DoesNotThrow()
     {
-        const double testValue = -1.0;
+        double testValue = -1.0;
         Expression<Func<double>> expression = () => testValue;
 
         ThrowIf.Argument.IsPositiveOrZero(expression);
@@ -748,7 +748,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNegativeOrZero_WhenDoubleIsPositive_DoesNotThrow()
     {
-        const double testValue = 1.0;
+        double testValue = 1.0;
         Expression<Func<double>> expression = () => testValue;
 
         ThrowIf.Argument.IsNegativeOrZero(expression);
@@ -757,7 +757,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenDoubleIsGreaterThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const double testValue = 10.5;
+        double testValue = 10.5;
         Expression<Func<double>> expression = () => testValue;
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -767,7 +767,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenDoubleIsNotGreaterThanLimit_DoesNotThrow()
     {
-        const double testValue = 3.0;
+        double testValue = 3.0;
         Expression<Func<double>> expression = () => testValue;
 
         ThrowIf.Argument.IsGreaterThan(expression, 5.0);
@@ -776,7 +776,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenDoubleIsLowerThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const double testValue = 3.0;
+        double testValue = 3.0;
         Expression<Func<double>> expression = () => testValue;
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -786,7 +786,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenDoubleIsNotLowerThanLimit_DoesNotThrow()
     {
-        const double testValue = 10.0;
+        double testValue = 10.0;
         Expression<Func<double>> expression = () => testValue;
 
         ThrowIf.Argument.IsLowerThan(expression, 5.0);
@@ -857,7 +857,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsPositiveOrZero_WhenDecimalIsNegative_DoesNotThrow()
     {
-        const decimal testValue = -1.0m;
+        decimal testValue = -1.0m;
         Expression<Func<decimal>> expression = () => testValue;
 
         ThrowIf.Argument.IsPositiveOrZero(expression);
@@ -878,7 +878,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNegativeOrZero_WhenDecimalIsPositive_DoesNotThrow()
     {
-        const decimal testValue = 1.0m;
+        decimal testValue = 1.0m;
         Expression<Func<decimal>> expression = () => testValue;
 
         ThrowIf.Argument.IsNegativeOrZero(expression);
@@ -887,7 +887,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenDecimalIsGreaterThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const decimal testValue = 10.5m;
+        decimal testValue = 10.5m;
         Expression<Func<decimal>> expression = () => testValue;
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -897,7 +897,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsGreaterThan_WhenDecimalIsNotGreaterThanLimit_DoesNotThrow()
     {
-        const decimal testValue = 3.0m;
+        decimal testValue = 3.0m;
         Expression<Func<decimal>> expression = () => testValue;
 
         ThrowIf.Argument.IsGreaterThan(expression, 5.0m);
@@ -906,7 +906,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenDecimalIsLowerThanLimit_ThrowsArgumentOutOfRangeException()
     {
-        const decimal testValue = 3.0m;
+        decimal testValue = 3.0m;
         Expression<Func<decimal>> expression = () => testValue;
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -916,7 +916,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsLowerThan_WhenDecimalIsNotLowerThanLimit_DoesNotThrow()
     {
-        const decimal testValue = 10.0m;
+        decimal testValue = 10.0m;
         Expression<Func<decimal>> expression = () => testValue;
 
         ThrowIf.Argument.IsLowerThan(expression, 5.0m);
@@ -943,7 +943,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsDefault_WhenValueIsNotNull_DoesNotThrow()
     {
-        const string testValue = "not null";
+        string testValue = "not null";
         Expression<Func<string?>> expression = () => testValue;
 
         ThrowIf.Argument.IsDefault(expression);
@@ -981,7 +981,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsNull_WhenValueIsNotNull_DoesNotThrow()
     {
-        const string testValue = "not null";
+        string testValue = "not null";
         Expression<Func<string?>> expression = () => testValue;
 
         ThrowIf.Argument.IsNull(expression);
@@ -990,7 +990,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsEqualTo_WhenValueIsEqualToTestValue_ThrowsArgumentOutOfRangeException()
     {
-        const int testValue = 5;
+        int testValue = 5;
         Expression<Func<int>> expression = () => testValue;
 
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -1002,7 +1002,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsEqualTo_WhenValueIsNotEqualToTestValue_DoesNotThrow()
     {
-        const int testValue = 5;
+        int testValue = 5;
         Expression<Func<int>> expression = () => testValue;
 
         ThrowIf.Argument.IsEqualTo(expression, 10);
@@ -1011,7 +1011,7 @@ public class ThrowIfArgumentTests
     [Fact]
     public void IsEqualTo_WithDefaultValue_WhenValueIsNotDefault_DoesNotThrow()
     {
-        const int testValue = 5;
+        int testValue = 5;
         Expression<Func<int>> expression = () => testValue;
 
         ThrowIf.Argument.IsEqualTo(expression);
