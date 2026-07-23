@@ -153,6 +153,16 @@ reference equality and ensure that their records behave in a predictable and val
 Feel free to explore the code, experiment with different collection types, and adapt the `ValueCollection<T>`
 implementation to suit your needs.
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 10**
+- xunit.v3
+- xunit.runner.visualstudio
+
+<!-- portfolio-techstack:end -->
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
