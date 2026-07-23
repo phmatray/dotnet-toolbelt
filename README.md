@@ -1,3 +1,5 @@
+![Monads banner](.github/banner.png)
+
 # Monads in C#
 
 ## Overview
