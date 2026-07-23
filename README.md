@@ -2,6 +2,19 @@
 
 ﻿# LinqNotNull
 
+<!-- portfolio-features:start -->
+
+## Features
+
+- **Null-safe LINQ** — extension methods that make working with nullable sequences clean and safe
+- **`WhereNotNull`** — filter out nulls and get a non-nullable element type back
+- **`SelectNotNull`** — project and drop nulls in one call
+- **Zero-ceremony** — drop-in `EnumerableExtensions` over standard LINQ
+- **Tested** — `LinqNotNull.UnitTests` covers the operators
+
+<!-- portfolio-features:end -->
+
+
 LinqNotNull is a lightweight .NET library that extends LINQ to provide additional functionality for handling nullable types in a clean and efficient manner.
 
 [![Nuget](https://img.shields.io/nuget/v/LinqNotNull)](https://www.nuget.org/packages/LinqNotNull/)
