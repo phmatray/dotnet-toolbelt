@@ -44,6 +44,14 @@ ccross-helper is a utility library providing a set of reusable portable and spec
 dotnet add package phmatray.ccross-helper
 ```
 
+<!-- portfolio-roadmap:start -->
+
+## Roadmap
+
+Planned work and known limitations are tracked in the [open issues](https://github.com/phmatray/ccross-helper/issues). Contributions toward them are welcome.
+
+<!-- portfolio-roadmap:end -->
+
 ## License
 MIT
 
