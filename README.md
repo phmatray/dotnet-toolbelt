@@ -1,3 +1,5 @@
+![CCross.ThrowIf banner](.github/banner.png)
+
 # CCross.ThrowIf
 Throw your exceptions easily.
 
