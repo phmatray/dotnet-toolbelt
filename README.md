@@ -66,6 +66,17 @@ If you'd like to explore more about monads and their use in functional programmi
 - [The Absolute Best Intro to Monads For Software Engineers (YouTube)](https://www.youtube.com/watch?v=C2w45qRc3aU)
 - [Monad (functional programming) on Wikipedia](https://en.wikipedia.org/wiki/Monad_(functional_programming))
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 10**
+- Spectre.Console
+- xunit.v3
+- xunit.runner.visualstudio
+
+<!-- portfolio-techstack:end -->
+
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests to enhance the project, add more examples, or improve documentation.
