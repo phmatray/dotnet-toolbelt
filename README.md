@@ -14,6 +14,21 @@
 [![Last commit](https://img.shields.io/github/last-commit/phmatray/dotnet-toolbelt)](https://github.com/phmatray/dotnet-toolbelt/commits)
 <!-- portfolio-badges:end -->
 
+<!-- portfolio-toc:start -->
+
+## Table of Contents
+
+- [Packages](#packages)
+- [Related (kept separate)](#related-kept-separate)
+- [History](#history)
+- [Tech Stack](#tech-stack)
+- [Roadmap](#roadmap)
+- [License](#license)
+- [Contributing](#contributing)
+
+<!-- portfolio-toc:end -->
+
+
 
 > A collection of small, focused **.NET utility libraries** — each ships as its own
 > NuGet package. Take only what you need.
