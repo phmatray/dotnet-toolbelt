@@ -15,6 +15,24 @@
 [![Last commit](https://img.shields.io/github/last-commit/phmatray/Monads)](https://github.com/phmatray/Monads/commits)
 <!-- portfolio-badges:end -->
 
+<!-- portfolio-toc:start -->
+
+## Table of Contents
+
+- [Overview](#overview)
+- [What Are Monads?](#what-are-monads)
+- [Features](#features)
+- [Example](#example)
+- [How to Use](#how-to-use)
+- [To Go Further](#to-go-further)
+- [Tech Stack](#tech-stack)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+<!-- portfolio-toc:end -->
+
+
 
 ## Overview
 
