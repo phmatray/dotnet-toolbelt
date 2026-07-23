@@ -1,5 +1,20 @@
 # .NET Toolbelt
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - dotnet-toolbelt](https://img.shields.io/static/v1?label=phmatray&message=dotnet-toolbelt&color=blue&logo=github)](https://github.com/phmatray/dotnet-toolbelt)
+![Top language](https://img.shields.io/github/languages/top/phmatray/dotnet-toolbelt)
+[![Stars](https://img.shields.io/github/stars/phmatray/dotnet-toolbelt?style=social)](https://github.com/phmatray/dotnet-toolbelt/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/dotnet-toolbelt?style=social)](https://github.com/phmatray/dotnet-toolbelt/network/members)
+[![License](https://img.shields.io/github/license/phmatray/dotnet-toolbelt)](https://github.com/phmatray/dotnet-toolbelt/blob/HEAD/LICENSE)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/dotnet-toolbelt)](https://github.com/phmatray/dotnet-toolbelt/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/dotnet-toolbelt)](https://github.com/phmatray/dotnet-toolbelt/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/dotnet-toolbelt)](https://github.com/phmatray/dotnet-toolbelt/commits)
+<!-- portfolio-badges:end -->
+
+
 > A collection of small, focused **.NET utility libraries** — each ships as its own
 > NuGet package. Take only what you need.
 
