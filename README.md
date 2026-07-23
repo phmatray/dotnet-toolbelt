@@ -40,6 +40,20 @@ public class MyService : IMyService { }
 // builder.Services.AddDepsinc();
 ```
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 8**
+- Shouldly
+- FluentAssertions.Analyzers
+- Microsoft.Extensions.DependencyInjection
+- xunit
+- xunit.runner.visualstudio
+- Microsoft.Extensions.DependencyInjection.Abstractions
+
+<!-- portfolio-techstack:end -->
+
 ## License
 MIT
 
