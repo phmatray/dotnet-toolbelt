@@ -1,3 +1,5 @@
+![dotnet-toolbelt banner](.github/banner.png)
+
 # .NET Toolbelt
 
 <!-- portfolio-badges:start -->
