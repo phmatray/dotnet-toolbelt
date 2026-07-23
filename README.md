@@ -34,6 +34,19 @@
 
 <!-- portfolio-toc:end -->
 
+<!-- portfolio-features:start -->
+
+## Features
+
+- **True value equality for records** — `ValueCollection<T>` gives .NET records real structural equality over their collection members
+- **Drop-in wrapper** — wrap a `List`/array in `ValueCollection<T>` so record equality compares contents, not references
+- **Correct hashing** — value-based `GetHashCode` so records with equal collections hash equally
+- **Educational sample** — `Records.cs`/`ValueCollection.cs` demonstrate the problem and the fix side by side
+- **Tested** — a test project asserts the equality and hashing behaviour
+
+<!-- portfolio-features:end -->
+
+
 
 
 Check my blog post on LinkedIn: [Understanding Value Equality in .NET Records](https://www.linkedin.com/pulse/understanding-value-equality-net-records-philippe-matray--cdlke/)
