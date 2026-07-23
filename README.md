@@ -1,3 +1,5 @@
+![LinqPlus banner](.github/banner.png)
+
 ﻿# LinqNotNull
 
 LinqNotNull is a lightweight .NET library that extends LINQ to provide additional functionality for handling nullable types in a clean and efficient manner.
