@@ -1,3 +1,5 @@
+![Depsinc banner](.github/banner.png)
+
 # Depsinc
 
 > Incremental dependency injection source generator for .NET.
