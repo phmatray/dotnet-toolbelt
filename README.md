@@ -52,6 +52,14 @@ Planned work and known limitations are tracked in the [open issues](https://gith
 
 <!-- portfolio-roadmap:end -->
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **C#**
+
+<!-- portfolio-techstack:end -->
+
 ## License
 MIT
 
