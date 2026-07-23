@@ -95,6 +95,14 @@ If you'd like to explore more about monads and their use in functional programmi
 
 <!-- portfolio-techstack:end -->
 
+<!-- portfolio-roadmap:start -->
+
+## Roadmap
+
+Planned work and known limitations are tracked in the [open issues](https://github.com/phmatray/Monads/issues). Contributions toward them are welcome.
+
+<!-- portfolio-roadmap:end -->
+
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests to enhance the project, add more examples, or improve documentation.
