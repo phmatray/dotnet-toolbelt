@@ -2,6 +2,20 @@
 
 # Depsinc
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - Depsinc](https://img.shields.io/static/v1?label=phmatray&message=Depsinc&color=blue&logo=github)](https://github.com/phmatray/Depsinc)
+![Top language](https://img.shields.io/github/languages/top/phmatray/Depsinc)
+[![Stars](https://img.shields.io/github/stars/phmatray/Depsinc?style=social)](https://github.com/phmatray/Depsinc/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/Depsinc?style=social)](https://github.com/phmatray/Depsinc/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/Depsinc)](https://github.com/phmatray/Depsinc/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/Depsinc)](https://github.com/phmatray/Depsinc/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/Depsinc)](https://github.com/phmatray/Depsinc/commits)
+<!-- portfolio-badges:end -->
+
+
 > Incremental dependency injection source generator for .NET.
 
 ## Description
