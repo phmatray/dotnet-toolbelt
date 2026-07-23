@@ -18,6 +18,19 @@
 
 <!-- portfolio-toc:start -->
 
+
+## Features
+
+- **Eight focused utility packages** — guards, null-safe LINQ, record equality, monads, CQRS, a DI source generator, and general helpers
+- **Independent NuGet packages** — take only what you need; IDs unchanged
+- **One home** — shared build, CI and versioning
+
+## Usage
+
+```bash
+dotnet add package CCross.ThrowIf   # or any other package in src/
+```
+
 ## Table of Contents
 
 - [Packages](#packages)
