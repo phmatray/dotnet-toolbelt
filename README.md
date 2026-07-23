@@ -183,6 +183,14 @@ implementation to suit your needs.
 
 <!-- portfolio-techstack:end -->
 
+<!-- portfolio-roadmap:start -->
+
+## Roadmap
+
+Planned work and known limitations are tracked in the [open issues](https://github.com/phmatray/RecordEquality/issues). Contributions toward them are welcome.
+
+<!-- portfolio-roadmap:end -->
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
