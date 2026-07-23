@@ -43,6 +43,14 @@ are unchanged, so existing installs keep working.
 Each package was merged with **full git history preserved** (`git subtree`). The
 original repositories are archived and redirect here.
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **C#**
+
+<!-- portfolio-techstack:end -->
+
 ## License
 
 MIT — see [`LICENSE`](LICENSE).
