@@ -1,3 +1,5 @@
+![RecordEquality banner](.github/banner.png)
+
 # Value Equality in .NET Records with ValueCollection
 
 Check my blog post on LinkedIn: [Understanding Value Equality in .NET Records](https://www.linkedin.com/pulse/understanding-value-equality-net-records-philippe-matray--cdlke/)
