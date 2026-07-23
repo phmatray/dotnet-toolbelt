@@ -244,6 +244,14 @@ services.AddCqrsHelpers(
 
 <!-- portfolio-techstack:end -->
 
+<!-- portfolio-roadmap:start -->
+
+## Roadmap
+
+Planned work and known limitations are tracked in the [open issues](https://github.com/phmatray/CqrsHelpers/issues). Contributions toward them are welcome.
+
+<!-- portfolio-roadmap:end -->
+
 ## License
 
 MIT
