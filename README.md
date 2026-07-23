@@ -2,6 +2,20 @@
 
 # ccross-helper
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - ccross-helper](https://img.shields.io/static/v1?label=phmatray&message=ccross-helper&color=blue&logo=github)](https://github.com/phmatray/ccross-helper)
+![Top language](https://img.shields.io/github/languages/top/phmatray/ccross-helper)
+[![Stars](https://img.shields.io/github/stars/phmatray/ccross-helper?style=social)](https://github.com/phmatray/ccross-helper/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/ccross-helper?style=social)](https://github.com/phmatray/ccross-helper/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/ccross-helper)](https://github.com/phmatray/ccross-helper/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/ccross-helper)](https://github.com/phmatray/ccross-helper/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/ccross-helper)](https://github.com/phmatray/ccross-helper/commits)
+<!-- portfolio-badges:end -->
+
+
 > A collection of portable and specialized C# helper classes to accelerate cross-platform development.
 
 ## Description
