@@ -1,3 +1,5 @@
+![simple-helpers banner](.github/banner.png)
+
 # simple-helpers
 
 > A lightweight collection of simple .NET helper utilities distributed as a NuGet package.
