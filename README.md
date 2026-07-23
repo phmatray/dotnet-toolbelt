@@ -2,6 +2,20 @@
 
 # Value Equality in .NET Records with ValueCollection
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - RecordEquality](https://img.shields.io/static/v1?label=phmatray&message=RecordEquality&color=blue&logo=github)](https://github.com/phmatray/RecordEquality)
+![Top language](https://img.shields.io/github/languages/top/phmatray/RecordEquality)
+[![Stars](https://img.shields.io/github/stars/phmatray/RecordEquality?style=social)](https://github.com/phmatray/RecordEquality/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/RecordEquality?style=social)](https://github.com/phmatray/RecordEquality/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/RecordEquality)](https://github.com/phmatray/RecordEquality/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/RecordEquality)](https://github.com/phmatray/RecordEquality/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/RecordEquality)](https://github.com/phmatray/RecordEquality/commits)
+<!-- portfolio-badges:end -->
+
+
 Check my blog post on LinkedIn: [Understanding Value Equality in .NET Records](https://www.linkedin.com/pulse/understanding-value-equality-net-records-philippe-matray--cdlke/)
 
 ## Overview
