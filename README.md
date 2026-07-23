@@ -15,6 +15,19 @@
 [![Last commit](https://img.shields.io/github/last-commit/phmatray/simple-helpers)](https://github.com/phmatray/simple-helpers/commits)
 <!-- portfolio-badges:end -->
 
+<!-- portfolio-toc:start -->
+
+## Table of Contents
+
+- [Description](#description)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [License](#license)
+- [Contributing](#contributing)
+
+<!-- portfolio-toc:end -->
+
+
 
 > A lightweight collection of simple .NET helper utilities distributed as a NuGet package.
 
