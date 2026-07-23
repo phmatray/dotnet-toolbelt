@@ -15,6 +15,26 @@
 [![Last commit](https://img.shields.io/github/last-commit/phmatray/RecordEquality)](https://github.com/phmatray/RecordEquality/commits)
 <!-- portfolio-badges:end -->
 
+<!-- portfolio-toc:start -->
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Key Concepts](#key-concepts)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Example Code](#example-code)
+- [Advantages of ValueCollection<T>](#advantages-of-valuecollectiont)
+- [Installation and Setup](#installation-and-setup)
+- [Requirements](#requirements)
+- [Conclusion](#conclusion)
+- [Tech Stack](#tech-stack)
+- [License](#license)
+- [Contributing](#contributing)
+
+<!-- portfolio-toc:end -->
+
+
 
 Check my blog post on LinkedIn: [Understanding Value Equality in .NET Records](https://www.linkedin.com/pulse/understanding-value-equality-net-records-philippe-matray--cdlke/)
 
