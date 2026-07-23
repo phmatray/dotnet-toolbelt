@@ -2,6 +2,20 @@
 
 # CqrsHelpers
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - CqrsHelpers](https://img.shields.io/static/v1?label=phmatray&message=CqrsHelpers&color=blue&logo=github)](https://github.com/phmatray/CqrsHelpers)
+![Top language](https://img.shields.io/github/languages/top/phmatray/CqrsHelpers)
+[![Stars](https://img.shields.io/github/stars/phmatray/CqrsHelpers?style=social)](https://github.com/phmatray/CqrsHelpers/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/CqrsHelpers?style=social)](https://github.com/phmatray/CqrsHelpers/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/CqrsHelpers)](https://github.com/phmatray/CqrsHelpers/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/CqrsHelpers)](https://github.com/phmatray/CqrsHelpers/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/CqrsHelpers)](https://github.com/phmatray/CqrsHelpers/commits)
+<!-- portfolio-badges:end -->
+
+
 A lightweight CQRS (Command Query Responsibility Segregation) library for .NET, focused on simplicity and extensibility.
 
 ## Features
