@@ -1,0 +1,62 @@
+﻿/* Author : 
+ * Philippe Matray
+ * 
+ * Date : 
+ * 2014-09-22
+ *
+ * Link:
+ * http://www.codeproject.com/Tips/549109/Working-with-SecureString
+ */
+
+using System;
+using System.Runtime.InteropServices;
+using System.Security;
+
+namespace SimpleHelpers.Extensions
+{
+    public static partial class SecureStringExtension
+    {
+        /// <summary>
+        ///     Converts to secure string.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
+        public static SecureString ConvertToSecureString(this string source)
+        {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
+            var secureString = new SecureString();
+
+            if (source.Length > 0)
+            {
+                foreach (char c in source)
+                    secureString.AppendChar(c);
+            }
+
+            return secureString;
+        }
+
+        /// <summary>
+        /// Converts to unsecure string.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
+        public static string ConvertToString(this SecureString source)
+        {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
+            IntPtr unmanagedString = IntPtr.Zero;
+            try
+            {
+                unmanagedString = Marshal.SecureStringToGlobalAllocUnicode(source);
+                return Marshal.PtrToStringUni(unmanagedString);
+            }
+            finally
+            {
+                Marshal.ZeroFreeGlobalAllocUnicode(unmanagedString);
+            }
+        }
+    }
+}

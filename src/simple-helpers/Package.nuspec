@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SimpleHelpers</id>
+    <version>1.0.0</version>
+    <authors>Philippe Matray</authors>
+    <owners>Philippe Matray</owners>
+    <iconUrl>http://icon-icons.com/icons2/390/PNG/512/banana_38544.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simple Helpers for your .NET applications</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>Helpers Utilities</tags>
+  </metadata>
+  <files>
+    <file src="SimpleHelpers\bin\Release\SimpleHelpers.dll" target="lib" />
+    <file src="SimpleHelpers\bin\Release\SimpleHelpers.pdb" target="lib" />
+  </files>
+</package>

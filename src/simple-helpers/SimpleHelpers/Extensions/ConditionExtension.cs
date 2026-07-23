@@ -1,0 +1,23 @@
+﻿/* Author : 
+ * Philippe Matray
+ * 
+ * Date : 
+ * 2014-09-22
+ */
+
+using System;
+using System.Linq;
+
+namespace SimpleHelpers.Extensions
+{
+    public static partial class ConditionExtension
+    {
+        public static bool EqualsAnyOf<T>(this T source, params T[] list)
+        {
+            if (source.Equals(null))
+                throw new ArgumentNullException(nameof(source));
+
+            return list.Contains(source);
+        }
+    }
+}
