@@ -21,6 +21,17 @@ Please check the [Website](http://phmatray.github.io/CCross.ThrowIf/)
 
 ---
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 9**
+- BenchmarkDotNet
+- xunit.v3
+- xunit.runner.visualstudio
+
+<!-- portfolio-techstack:end -->
+
 <!-- portfolio-sections:start -->
 
 ## Contributing
