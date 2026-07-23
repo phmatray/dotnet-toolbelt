@@ -2,6 +2,20 @@
 
 # simple-helpers
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - simple-helpers](https://img.shields.io/static/v1?label=phmatray&message=simple-helpers&color=blue&logo=github)](https://github.com/phmatray/simple-helpers)
+![Top language](https://img.shields.io/github/languages/top/phmatray/simple-helpers)
+[![Stars](https://img.shields.io/github/stars/phmatray/simple-helpers?style=social)](https://github.com/phmatray/simple-helpers/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/simple-helpers?style=social)](https://github.com/phmatray/simple-helpers/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/simple-helpers)](https://github.com/phmatray/simple-helpers/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/simple-helpers)](https://github.com/phmatray/simple-helpers/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/simple-helpers)](https://github.com/phmatray/simple-helpers/commits)
+<!-- portfolio-badges:end -->
+
+
 > A lightweight collection of simple .NET helper utilities distributed as a NuGet package.
 
 ## Description
