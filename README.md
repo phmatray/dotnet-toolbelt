@@ -18,3 +18,21 @@
 Throw your exceptions easily.
 
 Please check the [Website](http://phmatray.github.io/CCross.ThrowIf/)
+
+---
+
+<!-- portfolio-sections:start -->
+
+## Contributing
+
+Contributions are welcome. Open an issue first to discuss any significant change.
+
+1. Fork the repository and create your branch (`git checkout -b feat/my-feature`)
+2. Commit your changes (`git commit -m 'feat: ...'`)
+3. Push the branch and open a Pull Request
+
+## License
+
+No license has been declared for this repository yet. Until one is added, default copyright applies — see [choosealicense.com](https://choosealicense.com/) if you intend to open it up.
+
+<!-- portfolio-sections:end -->
