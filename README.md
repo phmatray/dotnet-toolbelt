@@ -1,3 +1,5 @@
+![CqrsHelpers banner](.github/banner.png)
+
 # CqrsHelpers
 
 A lightweight CQRS (Command Query Responsibility Segregation) library for .NET, focused on simplicity and extensibility.
