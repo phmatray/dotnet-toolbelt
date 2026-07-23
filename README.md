@@ -213,6 +213,20 @@ services.AddCqrsHelpers(
 - **Testable**: Clean interfaces make unit testing straightforward
 - **Performance**: Minimal overhead, behaviors are resolved once per request
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 10**
+- xunit.v3
+- xunit.runner.visualstudio
+- Shouldly
+- FakeItEasy
+- Microsoft.Extensions.DependencyInjection
+- Microsoft.Extensions.DependencyInjection.Abstractions
+
+<!-- portfolio-techstack:end -->
+
 ## License
 
 MIT
