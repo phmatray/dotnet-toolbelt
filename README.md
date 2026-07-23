@@ -2,6 +2,20 @@
 
 # Monads in C#
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - Monads](https://img.shields.io/static/v1?label=phmatray&message=Monads&color=blue&logo=github)](https://github.com/phmatray/Monads)
+![Top language](https://img.shields.io/github/languages/top/phmatray/Monads)
+[![Stars](https://img.shields.io/github/stars/phmatray/Monads?style=social)](https://github.com/phmatray/Monads/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/Monads?style=social)](https://github.com/phmatray/Monads/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/Monads)](https://github.com/phmatray/Monads/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/Monads)](https://github.com/phmatray/Monads/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/Monads)](https://github.com/phmatray/Monads/commits)
+<!-- portfolio-badges:end -->
+
+
 ## Overview
 
 Welcome to the **Monads in C#** project! 🎉 This repository provides a practical example of how monad-like patterns can be implemented in C# to enhance code quality, modularity, and side effect management. If you've heard about monads in functional programming and wondered how they could benefit your C# projects, you're in the right place.
