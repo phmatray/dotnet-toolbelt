@@ -1,3 +1,5 @@
+![ccross-helper banner](.github/banner.png)
+
 # ccross-helper
 
 > A collection of portable and specialized C# helper classes to accelerate cross-platform development.
