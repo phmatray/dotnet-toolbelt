@@ -93,6 +93,17 @@ LinqNotNull is thoroughly tested to ensure that it works as expected under diffe
 
 If you are contributing to the project, please make sure to add tests for new features or changes to existing ones to help maintain the quality and reliability of the library.
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 6**
+- Shouldly
+- xunit
+- xunit.runner.visualstudio
+
+<!-- portfolio-techstack:end -->
+
 ## 🛠️ Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute to LinqNotNull.
