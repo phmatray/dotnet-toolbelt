@@ -1,11 +1,4 @@
 # Known non-building subprojects (excluded):
-#   src/monads/Monads.sln           - Monads.Tests targets xunit.v3 but is missing
-#                                      <OutputType>Exe</OutputType>, which xunit.v3 requires.
-#   src/linqplus/LinqNotNull.sln    - LinqNotNull.UnitTests targets net6.0; Microsoft.NET.Test.Sdk
-#                                      18.4.0 no longer supports net6.0 (needs net8.0+ or
-#                                      SuppressTfmSupportBuildErrors).
-#   src/record-equality/RecordEquality.sln - RecordEquality.Tests targets xunit.v3 but is
-#                                      missing <OutputType>Exe</OutputType>, same issue as Monads.
 #   src/ccross-helper/CCrossHelper.sln - legacy .NET Framework/PCL/Windows Phone 8.1/UWP
 #                                      projects (TargetFrameworkVersion v3.5/v4.5, Portable,
 #                                      WindowsPhone, WindowsXaml); requires Windows + legacy
@@ -39,6 +32,9 @@ jobs:
           - src/cqrs/CqrsHelpers.sln
           - src/depsinc/Depsinc.sln
           - src/throwif/CCrossThrowIf.sln
+          - src/monads/Monads.sln
+          - src/record-equality/RecordEquality.sln
+          - src/linqplus/LinqNotNull.sln
     steps:
       - name: Checkout
         uses: actions/checkout@v4

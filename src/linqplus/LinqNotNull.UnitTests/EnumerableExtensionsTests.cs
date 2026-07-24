@@ -13,12 +13,12 @@ public class EnumerableExtensionsTests
     private static void AssertNonNullItems<T>(
         IReadOnlyCollection<T> result, int expectedCount, IEnumerable<T> expectedItems)
     {
-        result.ShouldNotContain(null);
+        result.ShouldNotContain(default(T));
         result.Count().ShouldBe(expectedCount);
-    
+
         if (expectedCount > 0)
         {
-            result.ShouldContain(expectedItems);
+            expectedItems.ShouldBeSubsetOf(result);
         }
         else
         {
@@ -80,13 +80,13 @@ public class EnumerableExtensionsTests
 
         // Act
         var result = _products.SelectNotNull(x => x).ToList();
-            
+
         // Assert
-        result.ShouldNotContain(null);
+        result.ShouldNotContain(default(Product));
         result.Count().ShouldBe(2);
         result.ShouldAllBe(p => p.SKU == "ABC123" || p.SKU == "XYZ789");
     }
-        
+
     [Fact]
     public void SelectNotNull_WhenCalledOnProductListWithDescriptionSelector_ShouldReturnNonNullProductDescriptions()
     {
@@ -94,13 +94,13 @@ public class EnumerableExtensionsTests
 
         // Act
         var result = _products.SelectNotNull(x => x?.Description).ToList();
-            
+
         // Assert
-        result.ShouldNotContain(null);
+        result.ShouldNotContain(default(string));
         result.Count().ShouldBe(1);
         result.Where(d => d == "description").Count().ShouldBe(1);
     }
-    
+
     [Fact]
     public void WhereNotNull_WhenCalledOnProductList_ShouldReturnNonNullProducts()
     {
@@ -108,9 +108,9 @@ public class EnumerableExtensionsTests
 
         // Act
         var result = _products.WhereNotNull().ToList();
-            
+
         // Assert
-        result.ShouldNotContain(null);
+        result.ShouldNotContain(default(Product));
         result.Count().ShouldBe(2);
         result.ShouldAllBe(p => p.SKU == "ABC123" || p.SKU == "XYZ789");
     }
